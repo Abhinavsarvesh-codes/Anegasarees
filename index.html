@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173a9b">
+  <meta name="description" content="Anega Sarees — Hub of South Indian Traditional Sarees.">
+  <title>Anega Sarees | Traditional Sarees</title>
+
+  <!--
+    ANEGA SAREES WEBSITE
+    Theme: Royal Blue + Saffron Orange + White
+
+    IMAGE URL GUIDE
+    1. Logo: YOUR_LOGO_IMAGE_URL_HERE
+    2. Hero banner: YOUR_HERO_IMAGE_URL_HERE
+    3. Bridal saree: YOUR_BRIDAL_SAREE_IMAGE_URL_HERE
+    4. Kanchipuram saree: YOUR_KANCHIPURAM_SAREE_IMAGE_URL_HERE
+    5. Handloom saree: YOUR_HANDLOOM_SAREE_IMAGE_URL_HERE
+    6. Butta saree: YOUR_BUTTA_SAREE_IMAGE_URL_HERE
+    7. Weaving image: YOUR_WEAVING_IMAGE_URL_HERE
+    8. Saree stock: YOUR_SAREE_STOCK_IMAGE_URL_HERE
+
+    Replace each placeholder with your actual image URL.
+  -->
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --blue: #173a9b;
+      --blue-dark: #10286d;
+      --orange: #f07816;
+      --orange-light: #ffb36b;
+      --white: #ffffff;
+      --light-blue: #f3f6ff;
+      --light-orange: #fff4e9;
+      --text: #202747;
+      --muted: #667085;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      background: var(--white);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .announcement {
+      padding: 9px 15px;
+      background: var(--blue-dark);
+      color: white;
+      text-align: center;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      min-height: 88px;
+      padding: 12px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      background: white;
+      border-bottom: 1px solid #e5e9f5;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .brand-logo {
+      width: 76px;
+      height: 68px;
+      object-fit: contain;
+    }
+
+    .brand-text strong {
+      display: block;
+      color: var(--blue);
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .brand-text small {
+      display: block;
+      color: var(--orange);
+      font-size: 9px;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 23px;
+    }
+
+    nav a {
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 600;
+      transition: color .2s;
+    }
+
+    nav a:hover {
+      color: var(--orange);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 14px 21px;
+      border: none;
+      cursor: pointer;
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 700;
+      transition: .25s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-blue {
+      background: var(--blue);
+      color: white;
+    }
+
+    .button-orange {
+      background: var(--orange);
+      color: white;
+    }
+
+    .button-orange:hover {
+      background: #d85d08;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: var(--blue);
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* HERO IMAGE
+       Search: South Indian silk saree traditional elegant
+    */
+
+    .hero {
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-height: 620px;
+      overflow: hidden;
+      color: white;
+      background-color: var(--blue-dark);
+      background-image: url("Golden Hour Saree Portrait.png");
+      background-position: center;
+      background-size: cover;
+    }
+
+    .hero::before {
+      position: absolute;
+      inset: 0;
+      content: "";
+      background: linear-gradient(
+        90deg,
+        rgba(10, 28, 90, .96) 0%,
+        rgba(18, 49, 135, .80) 48%,
+        rgba(18, 49, 135, .16) 100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      width: min(650px, 85%);
+      margin-left: 9%;
+      padding: 80px 0;
+    }
+
+    .eyebrow {
+      margin-bottom: 19px;
+      color: var(--orange);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .hero .eyebrow {
+      color: var(--orange-light);
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(42px, 6vw, 75px);
+      font-weight: 500;
+      line-height: 1.12;
+    }
+
+    .hero h1 em {
+      color: var(--orange-light);
+      font-weight: 500;
+    }
+
+    .hero-description {
+      max-width: 450px;
+      margin: 25px 0 30px;
+      color: #f0f3ff;
+      font-size: 14px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .hero-link {
+      padding: 10px 0;
+      border-bottom: 1px solid white;
+      color: white;
+      font-size: 12px;
+    }
+
+    .hero-note {
+      margin-top: 65px;
+      color: #e0e6ff;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .hero-note span {
+      margin-right: 12px;
+      color: var(--orange-light);
+    }
+
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 28px 8%;
+      border-bottom: 1px solid #e5e9f5;
+    }
+
+    .highlight {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 13px;
+      padding: 8px;
+      border-right: 1px solid #e5e9f5;
+    }
+
+    .highlight:last-child {
+      border-right: none;
+    }
+
+    .highlight-icon {
+      color: var(--orange);
+      font-size: 25px;
+    }
+
+    .highlight strong,
+    .highlight small {
+      display: block;
+    }
+
+    .highlight strong {
+      font-family: var(--serif);
+      font-size: 14px;
+    }
+
+    .highlight small {
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .section {
+      padding: 95px 8%;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 38px;
+    }
+
+    .section-heading h2,
+    .story-copy h2,
+    .bulk-content h2 {
+      color: var(--blue-dark);
+      font-family: var(--serif);
+      font-size: clamp(34px, 4vw, 51px);
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .section-heading h2 em,
+    .story-copy h2 em,
+    .bulk-content h2 em {
+      color: var(--orange);
+    }
+
+    .section-heading > p {
+      max-width: 340px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* COLLECTION IMAGES
+       Bridal: Indian red gold bridal silk saree
+       Kanchipuram: Kanchipuram silk saree traditional border
+       Handloom: South Indian handloom cotton saree
+       Butta: Soft silk saree butta design
+    */
+
+    .collections-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 17px;
+    }
+
+    .collection-card {
+      position: relative;
+      height: 390px;
+      overflow: hidden;
+      background: var(--light-blue);
+    }
+
+    .collection-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s;
+    }
+
+    .collection-card:hover img {
+      transform: scale(1.06);
+    }
+
+    .collection-card::after {
+      position: absolute;
+      inset: 25% 0 0;
+      content: "";
+      background: linear-gradient(transparent, rgba(8, 22, 68, .88));
+      pointer-events: none;
+    }
+
+    .collection-number {
+      position: absolute;
+      top: 14px;
+      left: 15px;
+      z-index: 2;
+      color: white;
+      font-size: 11px;
+    }
+
+    .collection-caption {
+      position: absolute;
+      right: 12px;
+      bottom: 20px;
+      left: 17px;
+      z-index: 2;
+      color: white;
+    }
+
+    .collection-caption small {
+      color: var(--orange-light);
+      font-size: 9px;
+      letter-spacing: 1px;
+    }
+
+    .collection-caption strong {
+      display: block;
+      margin-top: 5px;
+      font-family: var(--serif);
+      font-size: 20px;
+      line-height: 1.3;
+    }
+
+    .story {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: var(--light-blue);
+    }
+
+    /* ABOUT IMAGE
+       Search: traditional Indian saree weaving loom artisan
+    */
+
+    .story-image {
+      position: relative;
+      min-height: 540px;
+      background: #e5eaff;
+    }
+
+    .story-image img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .story-copy {
+      align-self: center;
+      padding: 75px 9%;
+    }
+
+    .story-copy > p:not(.eyebrow) {
+      margin: 20px 0;
+      color: #5e6680;
+      font-size: 13px;
+    }
+
+    .reseller {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: var(--blue-dark);
+      color: white;
+    }
+
+    .reseller-copy {
+      align-self: center;
+      padding: 80px 10%;
+    }
+
+    .reseller-copy h2 {
+      font-family: var(--serif);
+      font-size: clamp(35px, 4vw, 54px);
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .reseller-copy h2 em {
+      color: var(--orange-light);
+    }
+
+    .reseller-copy > p:not(.eyebrow) {
+      margin: 23px 0;
+      color: #e0e6ff;
+      font-size: 13px;
+    }
+
+    .reseller-copy ul {
+      margin: 25px 0;
+      list-style: none;
+    }
+
+    .reseller-copy li {
+      margin: 12px 0;
+      font-size: 12px;
+    }
+
+    .reseller-copy li span {
+      margin-right: 10px;
+      color: var(--orange-light);
+    }
+
+    /* RESELLER IMAGE
+       Search: colourful Indian sarees stacked in textile shop
+    */
+
+    .reseller-image {
+      position: relative;
+      min-height: 530px;
+      background: #203a7e;
+    }
+
+    .reseller-image img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .bulk {
+      padding: 65px 8%;
+      background: var(--light-orange);
+    }
+
+    .bulk-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 35px;
+    }
+
+    .bulk-content > div > p:last-child {
+      max-width: 620px;
+      margin-top: 15px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .bulk-content .button {
+      flex-shrink: 0;
+    }
+
+    /* CONTACT SECTION - NO ENQUIRY BOX */
+
+    .contact {
+      padding: 90px 9%;
+      background: var(--blue);
+      color: white;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-family: var(--serif);
+      font-size: clamp(38px, 4.5vw, 58px);
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .contact h2 em {
+      color: var(--orange-light);
+    }
+
+    .contact-description {
+      max-width: 550px;
+      margin: 22px auto;
+      color: #e4eaff;
+      font-size: 13px;
+    }
+
+    .contact-numbers {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 30px 0;
+    }
+
+    .contact-numbers a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-width: 210px;
+      padding: 15px 22px;
+      border: 1px solid var(--orange-light);
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    .contact-numbers a:hover {
+      background: var(--orange);
+      border-color: var(--orange);
+    }
+
+    .social-heading {
+      margin-top: 42px;
+      color: var(--orange-light);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      min-width: 120px;
+      padding: 11px 18px;
+      border: 1px solid #7387c8;
+      color: white;
+      font-size: 12px;
+      transition: .2s;
+    }
+
+    .social-links a:hover {
+      border-color: var(--orange-light);
+      background: rgba(255,255,255,.08);
+    }
+
+    footer {
+      padding: 38px 8% 20px;
+      background: var(--blue-dark);
+      color: white;
+      text-align: center;
+    }
+
+    .footer-brand {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 4px;
+    }
+
+    .footer-tagline {
+      margin-top: 4px;
+      color: var(--orange-light);
+      font-family: var(--serif);
+      font-size: 14px;
+      font-style: italic;
+    }
+
+    footer > p {
+      margin: 16px 0 28px;
+      color: #d9e1ff;
+      font-size: 11px;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      border-top: 1px solid #354b91;
+      padding-top: 17px;
+      color: #d9e1ff;
+      font-size: 10px;
+    }
+
+    @media (max-width: 1050px) {
+      header {
+        padding: 12px 4%;
+      }
+
+      nav {
+        gap: 13px;
+      }
+
+      nav a {
+        font-size: 11px;
+      }
+
+      .collections-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .collection-card {
+        height: 350px;
+      }
+
+      .section {
+        padding: 75px 5%;
+      }
+    }
+
+    @media (max-width: 780px) {
+      header {
+        min-height: 76px;
+      }
+
+      .brand-logo {
+        width: 58px;
+        height: 55px;
+      }
+
+      .brand-text strong {
+        font-size: 15px;
+        letter-spacing: 2px;
+      }
+
+      .brand-text small {
+        max-width: 190px;
+        font-size: 7px;
+      }
+
+      .menu-toggle {
+        display: block;
+        margin-left: auto;
+      }
+
+      nav {
+        position: absolute;
+        top: 76px;
+        right: 0;
+        left: 0;
+        display: none;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+        padding: 15px 6% 22px;
+        background: white;
+        box-shadow: 0 10px 15px #0001;
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      nav a {
+        padding: 12px 0;
+        border-bottom: 1px solid #e5e9f5;
+        font-size: 13px;
+      }
+
+      .header-cta {
+        padding: 10px 12px;
+        font-size: 10px;
+      }
+
+      .hero {
+        min-height: 550px;
+      }
+
+      .hero-content {
+        margin-left: 7%;
+      }
+
+      .hero::before {
+        background: linear-gradient(90deg, rgba(10, 28, 90, .94), rgba(18, 49, 135, .65));
+      }
+
+      .highlights {
+        padding: 22px 4%;
+        gap: 8px;
+      }
+
+      .highlight {
+        justify-content: flex-start;
+        gap: 8px;
+      }
+
+      .highlight strong {
+        font-size: 12px;
+      }
+
+      .highlight small {
+        font-size: 9px;
+      }
+
+      .story,
+      .reseller {
+        grid-template-columns: 1fr;
+      }
+
+      .story-image,
+      .reseller-image {
+        min-height: 360px;
+      }
+
+      .story-copy,
+      .reseller-copy {
+        padding: 65px 8%;
+      }
+
+      .bulk-content {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .contact {
+        padding: 65px 7%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .announcement {
+        font-size: 8px;
+        letter-spacing: 1px;
+      }
+
+      .brand-logo {
+        width: 44px;
+        height: 44px;
+      }
+
+      .brand-text strong {
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
+
+      .brand-text small {
+        max-width: 145px;
+        font-size: 6px;
+        letter-spacing: .4px;
+      }
+
+      .header-cta {
+        padding: 9px;
+        font-size: 9px;
+      }
+
+      .hero {
+        min-height: 520px;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .hero-description {
+        font-size: 13px;
+      }
+
+      .hero-note {
+        margin-top: 45px;
+        font-size: 8px;
+      }
+
+      .highlights {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 22px 8%;
+      }
+
+      .highlight {
+        border-right: none;
+        border-bottom: 1px solid #e5e9f5;
+        padding: 0 0 12px;
+      }
+
+      .highlight:last-child {
+        border-bottom: none;
+      }
+
+      .section {
+        padding: 60px 5%;
+      }
+
+      .section-heading {
+        display: block;
+      }
+
+      .section-heading > p {
+        margin-top: 15px;
+      }
+
+      .collections-grid {
+        gap: 10px;
+      }
+
+      .collection-card {
+        height: 275px;
+      }
+
+      .collection-caption {
+        left: 11px;
+        bottom: 13px;
+      }
+
+      .collection-caption strong {
+        font-size: 16px;
+      }
+
+      .collection-caption small {
+        font-size: 7px;
+      }
+
+      .story-image,
+      .reseller-image {
+        min-height: 300px;
+      }
+
+      .contact-numbers {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contact-numbers a {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .social-links {
+        gap: 10px;
+      }
+
+      .social-links a {
+        min-width: 105px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 6px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="announcement">
+    Hub of South Indian Traditional Sarees · Manufacturer · Weaver · Direct Seller
+  </div>
+
+  <header>
+    <a class="brand" href="#home" aria-label="Anega Sarees home">
+
+      <!-- LOGO URL: Replace with your Anega Sarees logo URL -->
+      <img
+        class="brand-logo"
+        src="anegatex logo.jpeg"
+        alt="Anega Sarees logo"
+      >
+
+      <span class="brand-text">
+        <strong>Anega Sarees</strong>
+        <small>HUB OF SOUTH INDIAN TRADITIONAL SAREES</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#collections">Collections</a>
+      <a href="#about">Our Story</a>
+      <a href="#reseller">Reseller Program</a>
+      <a href="#bulk">Bulk Orders</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="button button-blue header-cta" href="#contact">Contact Us ↗</a>
+  </header>
+
+  <main>
+
+    <!-- HERO SECTION
+         Image keywords: South Indian silk saree elegant traditional
+    -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">✦ &nbsp; The Art of Indian Textiles</p>
+
+        <h1>
+          Tradition woven<br>
+          into <em>every thread.</em>
+        </h1>
+
+        <p class="hero-description">
+          Discover sarees for life's most beautiful moments — from wedding celebrations to everyday elegance. Explore the colours, craftsmanship and heritage of South Indian textiles.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-orange" href="#collections">Explore Collections →</a>
+          <a class="hero-link" href="#about">Discover Anega ↗</a>
+        </div>
+
+        <p class="hero-note"><span>━━━━</span> Tradition · Quality · Elegance</p>
+      </div>
+    </section>
+
+    <!-- BUSINESS HIGHLIGHTS -->
+    <section class="highlights" aria-label="Business highlights">
+      <div class="highlight">
+        <span class="highlight-icon">✦</span>
+        <span>
+          <strong>Traditional Collections</strong>
+          <small>Styles for every occasion</small>
+        </span>
+      </div>
+
+      <div class="highlight">
+        <span class="highlight-icon">❋</span>
+        <span>
+          <strong>Direct from Anega Tex</strong>
+          <small>Manufacturer and direct seller</small>
+        </span>
+      </div>
+
+      <div class="highlight">
+        <span class="highlight-icon">◎</span>
+        <span>
+          <strong>Bulk & Reseller Enquiries</strong>
+          <small>Let's grow together</small>
+        </span>
+      </div>
+    </section>
+
+    <!-- COLLECTIONS -->
+    <section class="section" id="collections">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Find Your Favourite</p>
+          <h2>Collections with <em>character.</em></h2>
+        </div>
+
+        <p>
+          From timeless silk to graceful everyday drapes, find styles for celebrations, gifting and everyday wear.
+        </p>
+      </div>
+
+      <div class="collections-grid">
+
+        <!-- IMAGE URL: Bridal saree
+             Search: Indian bridal silk saree red gold
+        -->
+        <a class="collection-card" href="#contact">
+          <img
+            src="bridal.png"
+            alt="Wedding and bridal saree collection"
+            loading="lazy"
+          >
+          <span class="collection-number">01</span>
+          <span class="collection-caption">
+            <small>FOR YOUR BIG DAY</small>
+            <strong>Wedding & Bridal</strong>
+          </span>
+        </a>
+
+        <!-- IMAGE URL: Kanchipuram saree
+             Search: Kanchipuram silk saree traditional border
+        -->
+        <a class="collection-card" href="#contact">
+          <img
+            src="kanchipuram.png"
+            alt="Kanchipuram and soft silk sarees"
+            loading="lazy"
+          >
+          <span class="collection-number">02</span>
+          <span class="collection-caption">
+            <small>TIMELESS HERITAGE</small>
+            <strong>Kanchipuram & Soft Silk</strong>
+          </span>
+        </a>
+
+        <!-- IMAGE URL: Handloom saree
+             Search: South Indian handloom cotton saree
+        -->
+        <a class="collection-card" href="#contact">
+          <img
+            src="handloom.jpeg"
+            alt="Traditional handloom saree collection"
+            loading="lazy"
+          >
+          <span class="collection-number">03</span>
+          <span class="collection-caption">
+            <small>CRAFTED WITH CARE</small>
+            <strong>Handloom Collections</strong>
+          </span>
+        </a>
+
+        <!-- IMAGE URL: Butta saree
+             Search: soft silk saree allover butta design
+        -->
+        <a class="collection-card" href="#contact">
+          <img
+            src="butta.png"
+            alt="Soft silk and butta saree collection"
+            loading="lazy"
+          >
+          <span class="collection-number">04</span>
+          <span class="collection-caption">
+            <small>EVERYDAY ELEGANCE</small>
+            <strong>Soft Silk & Butta</strong>
+          </span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION
+         Image keywords: traditional Indian saree weaving handloom loom artisan
+    -->
+    <section class="story" id="about">
+      <div class="story-image">
+        <img
+          src="anegasarees.jpeg"
+          alt="Traditional saree weaving and textile craftsmanship"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="story-copy">
+        <p class="eyebrow">The Anega Tex Story</p>
+
+        <h2>
+          Beautiful fabrics.<br>
+          <em>Meaningful moments.</em>
+        </h2>
+
+        <p>
+          Anega Sarees celebrates the beauty of South Indian traditional sarees, bringing together classic styles and designs for celebrations, gifting and everyday wear.
+        </p>
+
+        <p>
+          As a manufacturer, weaver and direct seller, we welcome enquiries from individual customers, resellers and organisations looking for bulk saree or uniform orders.
+        </p>
+
+        <a class="button button-blue" href="#contact">Contact Our Team →</a>
+      </div>
+    </section>
+
+    <!-- RESELLER SECTION
+         Image keywords: colourful Indian sarees stacked in textile shop
+    -->
+    <section class="reseller" id="reseller">
+      <div class="reseller-copy">
+        <p class="eyebrow" style="color:var(--orange-light)">Grow with Anega</p>
+
+        <h2>
+          Your business journey can start <em>from home.</em>
+        </h2>
+
+        <p>
+          Interested in reselling sarees? Contact us to learn more about our reseller program, product updates and available designs.
+        </p>
+
+        <ul>
+          <li><span>✓</span> Ask about reseller opportunities</li>
+          <li><span>✓</span> Request available product photos and videos</li>
+          <li><span>✓</span> Explore single-piece and bulk orders</li>
+        </ul>
+
+        <a class="button button-orange" href="#contact">
+          Ask About Reselling →
+        </a>
+      </div>
+
+      <div class="reseller-image">
+        <img
+          src="stock.jpeg"
+          alt="Colourful sarees available from Anega Sarees"
+          loading="lazy"
+        >
+      </div>
+    </section>
+
+    <!-- BULK ORDERS -->
+    <section class="bulk" id="bulk">
+      <div class="bulk-content">
+        <div>
+          <p class="eyebrow">For Organisations & Groups</p>
+
+          <h2>Bulk orders, made <em>simpler.</em></h2>
+
+          <p>
+            Planning uniform sarees, coordinated event wear or a bulk textile order? Call us to discuss your quantity, preferred styles and requirements.
+          </p>
+        </div>
+
+        <a class="button button-blue" href="tel:9445471901">
+          Call for Bulk Orders →
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION
+         No enquiry box or form.
+         Customers can call directly or visit social media.
+    -->
+    <section class="contact" id="contact">
+      <p class="eyebrow" style="color:var(--orange-light)">Let's Connect</p>
+
+      <h2>
+        Your next favourite saree starts <em>here.</em>
+      </h2>
+
+      <p class="contact-description">
+        Contact Anega Sarees for saree collections, prices, availability, reseller opportunities and bulk orders.
+      </p>
+
+      <!-- DIRECT PHONE CALL LINKS -->
+      <div class="contact-numbers">
+        <a href="tel:9445471901">☎ &nbsp; Call 94454 71901</a>
+        <a href="tel:9445709901">☎ &nbsp; Call 94457 06601</a>
+      </div>
+
+      <p class="social-heading">Follow Anega Sarees</p>
+
+      <!-- SOCIAL MEDIA URLS
+           Replace the placeholders with your actual profile links.
+      -->
+      <div class="social-links">
+        <a
+          href="https://www.instagram.com/anegatex"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram ↗
+        </a>
+
+        <a
+          href="https://www.facebook.com/Anegatex"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Facebook ↗
+        </a>
+
+        <a
+          href="https://youtube.com/@Anegasarees"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          YouTube ↗
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-brand">ANEGA SAREES</div>
+
+    <div class="footer-tagline">
+      Hub of South Indian Traditional Sarees
+    </div>
+
+    <p>Woven with tradition. Shared with care.</p>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Anega Sarees. All rights reserved.</span>
+      <span>Manufacturer · Weaver · Direct Seller</span>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navigation = document.querySelector("nav");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navigation.classList.toggle("open");
+
+      menuToggle.textContent = isOpen ? "×" : "☰";
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation" : "Open navigation"
+      );
+    });
+
+    navigation
