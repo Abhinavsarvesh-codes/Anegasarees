@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,23 +7,6 @@
   <meta name="theme-color" content="#173a9b">
   <meta name="description" content="Anega Sarees — Hub of South Indian Traditional Sarees.">
   <title>Anega Sarees | Traditional Sarees</title>
-
-  <!--
-    ANEGA SAREES WEBSITE
-    Theme: Royal Blue + Saffron Orange + White
-
-    IMAGE URL GUIDE
-    1. Logo: YOUR_LOGO_IMAGE_URL_HERE
-    2. Hero banner: YOUR_HERO_IMAGE_URL_HERE
-    3. Bridal saree: YOUR_BRIDAL_SAREE_IMAGE_URL_HERE
-    4. Kanchipuram saree: YOUR_KANCHIPURAM_SAREE_IMAGE_URL_HERE
-    5. Handloom saree: YOUR_HANDLOOM_SAREE_IMAGE_URL_HERE
-    6. Butta saree: YOUR_BUTTA_SAREE_IMAGE_URL_HERE
-    7. Weaving image: YOUR_WEAVING_IMAGE_URL_HERE
-    8. Saree stock: YOUR_SAREE_STOCK_IMAGE_URL_HERE
-
-    Replace each placeholder with your actual image URL.
-  -->
 
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
 
@@ -79,12 +63,14 @@
       text-transform: uppercase;
     }
 
+    /* HEADER */
+
     header {
       position: sticky;
       top: 0;
       z-index: 100;
       min-height: 88px;
-      padding: 12px 6%;
+      padding: 12px 5%;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -96,14 +82,34 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 16px;
       flex-shrink: 0;
     }
 
+    /* Header logo: no white box */
+    .brand-logo-area {
+      width: 82px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      background: transparent;
+      overflow: hidden;
+    }
+
     .brand-logo {
-      width: 76px;
-      height: 68px;
+      width: 100%;
+      height: 100%;
       object-fit: contain;
+      background: transparent;
+      mix-blend-mode: multiply;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .brand-text strong {
@@ -111,21 +117,25 @@
       color: var(--blue);
       font-size: 18px;
       font-weight: 800;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       text-transform: uppercase;
+      line-height: 1.4;
     }
 
     .brand-text small {
       display: block;
+      max-width: 240px;
+      margin-top: 4px;
       color: var(--orange);
       font-size: 9px;
       letter-spacing: 1px;
+      line-height: 1.5;
     }
 
     nav {
       display: flex;
       align-items: center;
-      gap: 23px;
+      gap: 20px;
     }
 
     nav a {
@@ -143,7 +153,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 12px;
+      gap: 10px;
       padding: 14px 21px;
       border: none;
       cursor: pointer;
@@ -180,44 +190,72 @@
       cursor: pointer;
     }
 
-    /* HERO IMAGE
-       Search: South Indian silk saree traditional elegant
-    */
+    .social-icon {
+      width: 19px;
+      height: 19px;
+      flex: 0 0 19px;
+      fill: currentColor;
+    }
 
-    .hero {
-      position: relative;
-      display: flex;
+    .header-whatsapp {
+      white-space: nowrap;
+      background: #168b50;
+    }
+
+    .header-whatsapp:hover {
+      background: #107541;
+    }
+
+    /* HERO */
+
+    .home-intro {
+      padding: 65px 8%;
+      background: var(--light-blue);
+      border-bottom: 1px solid #e5e9f5;
+    }
+
+    .home-intro-inner {
+      max-width: 1250px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
       align-items: center;
-      min-height: 620px;
-      overflow: hidden;
-      color: white;
-      background-color: var(--blue-dark);
-      background-image: url("Golden Hour Saree Portrait.png");
-      background-position: center;
-      background-size: cover;
+      gap: 45px;
     }
 
-    .hero::before {
-      position: absolute;
-      inset: 0;
-      content: "";
-      background: linear-gradient(
-        90deg,
-        rgba(10, 28, 90, .96) 0%,
-        rgba(18, 49, 135, .80) 48%,
-        rgba(18, 49, 135, .16) 100%
-      );
+    .home-intro-copy {
+      min-width: 0;
     }
 
-    .hero-content {
-      position: relative;
-      width: min(650px, 85%);
-      margin-left: 9%;
-      padding: 80px 0;
+    .home-intro h1 {
+      color: var(--blue-dark);
+      font-family: var(--serif);
+      font-size: clamp(34px, 4.5vw, 55px);
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .home-intro h1 em {
+      color: var(--orange);
+    }
+
+    .home-intro p:not(.eyebrow) {
+      max-width: 480px;
+      margin-top: 15px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .home-intro-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 15px;
+      margin-top: 22px;
     }
 
     .eyebrow {
-      margin-bottom: 19px;
+      margin-bottom: 16px;
       color: var(--orange);
       font-size: 10px;
       font-weight: 800;
@@ -225,55 +263,30 @@
       text-transform: uppercase;
     }
 
-    .hero .eyebrow {
-      color: var(--orange-light);
-    }
+    /* HERO LOGO: BLENDS WITH LIGHT-BLUE BACKGROUND */
 
-    .hero h1 {
-      font-family: var(--serif);
-      font-size: clamp(42px, 6vw, 75px);
-      font-weight: 500;
-      line-height: 1.12;
-    }
-
-    .hero h1 em {
-      color: var(--orange-light);
-      font-weight: 500;
-    }
-
-    .hero-description {
-      max-width: 450px;
-      margin: 25px 0 30px;
-      color: #f0f3ff;
-      font-size: 14px;
-    }
-
-    .hero-actions {
+    .hero-logo-area {
+      min-height: 360px;
       display: flex;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 18px;
+      justify-content: center;
+      padding: 15px;
+      background: transparent;
+      overflow: hidden;
     }
 
-    .hero-link {
-      padding: 10px 0;
-      border-bottom: 1px solid white;
-      color: white;
-      font-size: 12px;
+    .hero-logo {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      max-height: 350px;
+      object-fit: contain;
+      background: transparent;
+      mix-blend-mode: multiply;
+      filter: contrast(1.03);
     }
 
-    .hero-note {
-      margin-top: 65px;
-      color: #e0e6ff;
-      font-size: 9px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .hero-note span {
-      margin-right: 12px;
-      color: var(--orange-light);
-    }
+    /* HIGHLIGHTS */
 
     .highlights {
       display: grid;
@@ -315,8 +328,10 @@
       font-size: 10px;
     }
 
+    /* GENERAL SECTION */
+
     .section {
-      padding: 95px 8%;
+      padding: 85px 8%;
     }
 
     .section-heading {
@@ -349,12 +364,7 @@
       font-size: 13px;
     }
 
-    /* COLLECTION IMAGES
-       Bridal: Indian red gold bridal silk saree
-       Kanchipuram: Kanchipuram silk saree traditional border
-       Handloom: South Indian handloom cotton saree
-       Butta: Soft silk saree butta design
-    */
+    /* COLLECTIONS */
 
     .collections-grid {
       display: grid;
@@ -420,39 +430,61 @@
       line-height: 1.3;
     }
 
-    .story {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+    /* ABOUT */
+
+    .about-section {
+      padding: 75px 8%;
       background: var(--light-blue);
     }
 
-    /* ABOUT IMAGE
-       Search: traditional Indian saree weaving loom artisan
-    */
-
-    .story-image {
-      position: relative;
-      min-height: 540px;
-      background: #e5eaff;
+    .about-heading {
+      text-align: center;
+      margin-bottom: 35px;
     }
 
-    .story-image img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .about-heading h2 {
+      color: var(--blue-dark);
+      font-family: var(--serif);
+      font-size: clamp(34px, 4vw, 51px);
+      font-weight: 500;
+      line-height: 1.2;
     }
 
-    .story-copy {
-      align-self: center;
-      padding: 75px 9%;
+    .about-heading h2 em {
+      color: var(--orange);
     }
 
-    .story-copy > p:not(.eyebrow) {
-      margin: 20px 0;
-      color: #5e6680;
-      font-size: 13px;
+    .about-content {
+      max-width: 900px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
     }
+
+    .about-content p {
+      margin-bottom: 18px;
+    }
+
+    .about-content .about-intro {
+      color: var(--text);
+      font-size: 17px;
+    }
+
+    .about-content strong {
+      color: var(--blue);
+    }
+
+    .about-tagline {
+      margin-top: 25px;
+      color: var(--blue);
+      font-family: var(--serif);
+      font-size: 18px;
+      font-style: italic;
+      text-align: center;
+    }
+
+    /* RESELLER PROGRAM */
 
     .reseller {
       display: grid;
@@ -498,10 +530,6 @@
       color: var(--orange-light);
     }
 
-    /* RESELLER IMAGE
-       Search: colourful Indian sarees stacked in textile shop
-    */
-
     .reseller-image {
       position: relative;
       min-height: 530px;
@@ -514,6 +542,8 @@
       height: 100%;
       object-fit: cover;
     }
+
+    /* BULK ORDERS */
 
     .bulk {
       padding: 65px 8%;
@@ -538,7 +568,7 @@
       flex-shrink: 0;
     }
 
-    /* CONTACT SECTION - NO ENQUIRY BOX */
+    /* CONTACT */
 
     .contact {
       padding: 90px 9%;
@@ -565,7 +595,8 @@
       font-size: 13px;
     }
 
-    .contact-numbers {
+    .contact-numbers,
+    .social-links {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -573,23 +604,32 @@
       margin: 30px 0;
     }
 
-    .contact-numbers a {
+    .contact-numbers a,
+    .social-links a {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      min-width: 210px;
-      padding: 15px 22px;
-      border: 1px solid var(--orange-light);
+      min-width: 150px;
+      padding: 13px 18px;
+      border: 1px solid #7387c8;
       color: white;
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 700;
       transition: .2s;
     }
 
-    .contact-numbers a:hover {
+    .contact-numbers a {
+      min-width: 210px;
+      border-color: var(--orange-light);
+      font-size: 14px;
+    }
+
+    .contact-numbers a:hover,
+    .social-links a:hover {
       background: var(--orange);
       border-color: var(--orange);
+      transform: translateY(-2px);
     }
 
     .social-heading {
@@ -602,26 +642,20 @@
     }
 
     .social-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 18px;
       margin-top: 20px;
     }
 
-    .social-links a {
-      min-width: 120px;
-      padding: 11px 18px;
-      border: 1px solid #7387c8;
-      color: white;
-      font-size: 12px;
-      transition: .2s;
+    .whatsapp-link {
+      background: #168b50;
+      border-color: #168b50 !important;
     }
 
-    .social-links a:hover {
-      border-color: var(--orange-light);
-      background: rgba(255,255,255,.08);
+    .whatsapp-link:hover {
+      background: #107541 !important;
+      border-color: #107541 !important;
     }
+
+    /* FOOTER */
 
     footer {
       padding: 38px 8% 20px;
@@ -660,17 +694,68 @@
       font-size: 10px;
     }
 
-    @media (max-width: 1050px) {
+    /* FLOATING WHATSAPP */
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 90;
+      width: 54px;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #168b50;
+      color: white;
+      border-radius: 50%;
+      box-shadow: 0 5px 20px #0003;
+    }
+
+    .floating-whatsapp svg {
+      width: 28px;
+      height: 28px;
+      fill: currentColor;
+    }
+
+    /* TABLET */
+
+    @media (max-width: 1100px) {
       header {
-        padding: 12px 4%;
+        padding: 12px 3%;
+        gap: 12px;
       }
 
       nav {
-        gap: 13px;
+        gap: 12px;
       }
 
       nav a {
-        font-size: 11px;
+        font-size: 10px;
+      }
+
+      .brand {
+        gap: 10px;
+      }
+
+      .brand-logo-area {
+        width: 65px;
+        height: 60px;
+      }
+
+      .brand-text strong {
+        font-size: 15px;
+        letter-spacing: 1px;
+      }
+
+      .brand-text small {
+        max-width: 175px;
+        font-size: 7px;
+      }
+
+      .header-whatsapp {
+        padding: 11px;
+        font-size: 10px;
       }
 
       .collections-grid {
@@ -682,27 +767,29 @@
       }
 
       .section {
-        padding: 75px 5%;
+        padding: 70px 5%;
       }
     }
+
+    /* MOBILE NAVIGATION */
 
     @media (max-width: 780px) {
       header {
         min-height: 76px;
+        padding: 10px 4%;
       }
 
-      .brand-logo {
-        width: 58px;
-        height: 55px;
+      .brand-logo-area {
+        width: 55px;
+        height: 52px;
       }
 
       .brand-text strong {
-        font-size: 15px;
-        letter-spacing: 2px;
+        font-size: 13px;
       }
 
       .brand-text small {
-        max-width: 190px;
+        max-width: 175px;
         font-size: 7px;
       }
 
@@ -735,21 +822,28 @@
         font-size: 13px;
       }
 
-      .header-cta {
-        padding: 10px 12px;
+      .header-whatsapp {
+        padding: 10px;
         font-size: 10px;
       }
 
-      .hero {
-        min-height: 550px;
+      .home-intro {
+        padding: 50px 7%;
       }
 
-      .hero-content {
-        margin-left: 7%;
+      .home-intro-inner {
+        grid-template-columns: 1fr;
+        gap: 25px;
       }
 
-      .hero::before {
-        background: linear-gradient(90deg, rgba(10, 28, 90, .94), rgba(18, 49, 135, .65));
+      .hero-logo-area {
+        min-height: 220px;
+        padding: 10px;
+      }
+
+      .hero-logo {
+        max-width: 260px;
+        max-height: 230px;
       }
 
       .highlights {
@@ -770,17 +864,14 @@
         font-size: 9px;
       }
 
-      .story,
       .reseller {
         grid-template-columns: 1fr;
       }
 
-      .story-image,
       .reseller-image {
         min-height: 360px;
       }
 
-      .story-copy,
       .reseller-copy {
         padding: 65px 8%;
       }
@@ -795,48 +886,46 @@
       }
     }
 
+    /* SMALL MOBILE */
+
     @media (max-width: 480px) {
       .announcement {
         font-size: 8px;
         letter-spacing: 1px;
       }
 
-      .brand-logo {
-        width: 44px;
-        height: 44px;
+      .brand {
+        gap: 7px;
+      }
+
+      .brand-logo-area {
+        width: 43px;
+        height: 43px;
       }
 
       .brand-text strong {
-        font-size: 12px;
-        letter-spacing: 1px;
+        font-size: 11px;
+        letter-spacing: .7px;
       }
 
       .brand-text small {
-        max-width: 145px;
+        max-width: 135px;
         font-size: 6px;
-        letter-spacing: .4px;
+        letter-spacing: .3px;
       }
 
-      .header-cta {
-        padding: 9px;
+      .header-whatsapp {
+        padding: 8px;
+        gap: 5px;
         font-size: 9px;
       }
 
-      .hero {
-        min-height: 520px;
+      .menu-toggle {
+        font-size: 24px;
       }
 
-      .hero h1 {
-        font-size: 43px;
-      }
-
-      .hero-description {
-        font-size: 13px;
-      }
-
-      .hero-note {
-        margin-top: 45px;
-        font-size: 8px;
+      .home-intro h1 {
+        font-size: 38px;
       }
 
       .highlights {
@@ -856,7 +945,7 @@
       }
 
       .section {
-        padding: 60px 5%;
+        padding: 55px 5%;
       }
 
       .section-heading {
@@ -888,7 +977,10 @@
         font-size: 7px;
       }
 
-      .story-image,
+      .about-section {
+        padding: 55px 6%;
+      }
+
       .reseller-image {
         min-height: 300px;
       }
@@ -925,18 +1017,15 @@
     Hub of South Indian Traditional Sarees · Manufacturer · Weaver · Direct Seller
   </div>
 
+  <!-- HEADER -->
   <header>
     <a class="brand" href="#home" aria-label="Anega Sarees home">
-
-      <!-- LOGO URL: Replace with your Anega Sarees logo URL -->
-      <img
-        class="brand-logo"
-        src="anegatex logo.jpeg"
-        alt="Anega Sarees logo"
-      >
+      <div class="brand-logo-area">
+        <img class="brand-logo" src="anegatex logo.jpeg" alt="Anega Sarees logo">
+      </div>
 
       <span class="brand-text">
-        <strong>Anega Sarees</strong>
+        <strong>ANEGA SAREES</strong>
         <small>HUB OF SOUTH INDIAN TRADITIONAL SAREES</small>
       </span>
     </a>
@@ -946,39 +1035,52 @@
     <nav aria-label="Main navigation">
       <a href="#home">Home</a>
       <a href="#collections">Collections</a>
-      <a href="#about">Our Story</a>
+      <a href="#about">About</a>
       <a href="#reseller">Reseller Program</a>
       <a href="#bulk">Bulk Orders</a>
       <a href="#contact">Contact</a>
     </nav>
 
-    <a class="button button-blue header-cta" href="#contact">Contact Us ↗</a>
+    <a class="button button-blue header-whatsapp"
+       href="https://wa.me/919445471901"
+       target="_blank" rel="noopener noreferrer">
+      <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.9c0 2.1.5 4.1 1.6 5.9L.2 24l6.3-1.7a12 12 0 0 0 5.6 1.4h.1C18.7 23.7 24 18.4 24 11.9c0-3.2-1.2-6.2-3.5-8.4ZM12.1 21.7a10 10 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.4 4.7Zm5.4-7.4c-.3-.2-1.8-.9-2-.9-.3-.1-.5-.2-.7.1l-1 1.2c-.2.2-.4.2-.7.1-1.8-.9-3-1.6-4.1-3.7-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6 1.9.8 2.7.9 3.6.8.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.5Z"/>
+      </svg>
+      WhatsApp
+    </a>
   </header>
 
   <main>
 
-    <!-- HERO SECTION
-         Image keywords: South Indian silk saree elegant traditional
-    -->
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <p class="eyebrow">✦ &nbsp; The Art of Indian Textiles</p>
+    <!-- HERO -->
+    <section class="home-intro" id="home">
+      <div class="home-intro-inner">
 
-        <h1>
-          Tradition woven<br>
-          into <em>every thread.</em>
-        </h1>
+        <div class="home-intro-copy">
+          <p class="eyebrow">The Art of Indian Textiles</p>
 
-        <p class="hero-description">
-          Discover sarees for life's most beautiful moments — from wedding celebrations to everyday elegance. Explore the colours, craftsmanship and heritage of South Indian textiles.
-        </p>
+          <h1>Tradition woven<br>into <em>every thread.</em></h1>
 
-        <div class="hero-actions">
-          <a class="button button-orange" href="#collections">Explore Collections →</a>
-          <a class="hero-link" href="#about">Discover Anega ↗</a>
+          <p>
+            Discover sarees for life's most beautiful moments — from wedding
+            celebrations to everyday elegance. Explore the colours,
+            craftsmanship and heritage of South Indian textiles.
+          </p>
+
+          <div class="home-intro-actions">
+            <a class="button button-orange" href="#collections">Explore Collections →</a>
+            <a class="button button-blue" href="#about">About Anega →</a>
+          </div>
         </div>
 
-        <p class="hero-note"><span>━━━━</span> Tradition · Quality · Elegance</p>
+        <!-- Logo blends with the hero background -->
+        <div class="hero-logo-area">
+          <img class="hero-logo"
+               src="anegasarees.jpeg"
+               alt="Anega Sarees official logo">
+        </div>
+
       </div>
     </section>
 
@@ -1018,21 +1120,14 @@
         </div>
 
         <p>
-          From timeless silk to graceful everyday drapes, find styles for celebrations, gifting and everyday wear.
+          From timeless silk to graceful everyday drapes, find styles for
+          celebrations, gifting and everyday wear.
         </p>
       </div>
 
       <div class="collections-grid">
-
-        <!-- IMAGE URL: Bridal saree
-             Search: Indian bridal silk saree red gold
-        -->
         <a class="collection-card" href="#contact">
-          <img
-            src="bridal.png"
-            alt="Wedding and bridal saree collection"
-            loading="lazy"
-          >
+          <img src="bridal.png" alt="Wedding and bridal sarees" loading="lazy">
           <span class="collection-number">01</span>
           <span class="collection-caption">
             <small>FOR YOUR BIG DAY</small>
@@ -1040,15 +1135,8 @@
           </span>
         </a>
 
-        <!-- IMAGE URL: Kanchipuram saree
-             Search: Kanchipuram silk saree traditional border
-        -->
         <a class="collection-card" href="#contact">
-          <img
-            src="kanchipuram.png"
-            alt="Kanchipuram and soft silk sarees"
-            loading="lazy"
-          >
+          <img src="kanchipuram.png" alt="Kanchipuram silk sarees" loading="lazy">
           <span class="collection-number">02</span>
           <span class="collection-caption">
             <small>TIMELESS HERITAGE</small>
@@ -1056,15 +1144,8 @@
           </span>
         </a>
 
-        <!-- IMAGE URL: Handloom saree
-             Search: South Indian handloom cotton saree
-        -->
         <a class="collection-card" href="#contact">
-          <img
-            src="handloom.jpeg"
-            alt="Traditional handloom saree collection"
-            loading="lazy"
-          >
+          <img src="handlooom.jpeg" alt="Traditional handloom sarees" loading="lazy">
           <span class="collection-number">03</span>
           <span class="collection-caption">
             <small>CRAFTED WITH CARE</small>
@@ -1072,70 +1153,65 @@
           </span>
         </a>
 
-        <!-- IMAGE URL: Butta saree
-             Search: soft silk saree allover butta design
-        -->
         <a class="collection-card" href="#contact">
-          <img
-            src="butta.png"
-            alt="Soft silk and butta saree collection"
-            loading="lazy"
-          >
+          <img src="butta.png" alt="Soft silk and butta sarees" loading="lazy">
           <span class="collection-number">04</span>
           <span class="collection-caption">
             <small>EVERYDAY ELEGANCE</small>
             <strong>Soft Silk & Butta</strong>
           </span>
         </a>
-
       </div>
     </section>
 
-    <!-- ABOUT SECTION
-         Image keywords: traditional Indian saree weaving handloom loom artisan
-    -->
-    <section class="story" id="about">
-      <div class="story-image">
-        <img
-          src="anegasarees.jpeg"
-          alt="Traditional saree weaving and textile craftsmanship"
-          loading="lazy"
-        >
+    <!-- ABOUT ANEGA SAREES -->
+    <section class="about-section" id="about">
+      <div class="about-heading">
+        <p class="eyebrow">THE ANEGA TEX STORY</p>
+        <h2>About <em>Anega Sarees.</em></h2>
       </div>
 
-      <div class="story-copy">
-        <p class="eyebrow">The Anega Tex Story</p>
-
-        <h2>
-          Beautiful fabrics.<br>
-          <em>Meaningful moments.</em>
-        </h2>
-
-        <p>
-          Anega Sarees celebrates the beauty of South Indian traditional sarees, bringing together classic styles and designs for celebrations, gifting and everyday wear.
+      <div class="about-content">
+        <p class="about-intro">
+          <strong>Anega Sarees</strong> is a saree manufacturer, weaver,
+          and direct-to-consumer wholesaler based in
+          <strong>Ilampillai, Tamil Nadu, India.</strong>
         </p>
 
         <p>
-          As a manufacturer, weaver and direct seller, we welcome enquiries from individual customers, resellers and organisations looking for bulk saree or uniform orders.
+          We serve retail buyers and home-based resellers, helping customers
+          connect directly with our saree business for product enquiries
+          and wholesale purchases.
         </p>
 
-        <a class="button button-blue" href="#contact">Contact Our Team →</a>
+        <p>
+          We also offer zero-investment reselling partnerships. Interested
+          resellers can contact us to learn about the process, product
+          availability, pricing and partnership terms.
+        </p>
+
+        <p>
+          Our aim is to connect customers with traditional sarees while
+          building lasting relationships with buyers and reselling partners.
+        </p>
+
+        <p class="about-tagline">
+          Anega Sarees — Tradition in Every Thread,
+          Opportunity in Every Saree.
+        </p>
       </div>
     </section>
 
-    <!-- RESELLER SECTION
-         Image keywords: colourful Indian sarees stacked in textile shop
-    -->
+    <!-- RESELLER PROGRAM -->
     <section class="reseller" id="reseller">
       <div class="reseller-copy">
         <p class="eyebrow" style="color:var(--orange-light)">Grow with Anega</p>
 
-        <h2>
-          Your business journey can start <em>from home.</em>
-        </h2>
+        <h2>Your business journey can start <em>from home.</em></h2>
 
         <p>
-          Interested in reselling sarees? Contact us to learn more about our reseller program, product updates and available designs.
+          Interested in reselling sarees? Contact us to learn more about our
+          reseller program, product updates and available designs.
         </p>
 
         <ul>
@@ -1144,17 +1220,15 @@
           <li><span>✓</span> Explore single-piece and bulk orders</li>
         </ul>
 
-        <a class="button button-orange" href="#contact">
+        <a class="button button-orange"
+           href="https://wa.me/919445471901?text=Hello%20Anega%20Sarees%2C%20I%20am%20interested%20in%20your%20reseller%20program."
+           target="_blank" rel="noopener noreferrer">
           Ask About Reselling →
         </a>
       </div>
 
       <div class="reseller-image">
-        <img
-          src="stock.jpeg"
-          alt="Colourful sarees available from Anega Sarees"
-          loading="lazy"
-        >
+        <img src="stock.jpeg" alt="Colourful sarees available from Anega Sarees" loading="lazy">
       </div>
     </section>
 
@@ -1163,70 +1237,56 @@
       <div class="bulk-content">
         <div>
           <p class="eyebrow">For Organisations & Groups</p>
-
           <h2>Bulk orders, made <em>simpler.</em></h2>
 
           <p>
-            Planning uniform sarees, coordinated event wear or a bulk textile order? Call us to discuss your quantity, preferred styles and requirements.
+            Planning uniform sarees, coordinated event wear or a bulk textile
+            order? Contact us to discuss your quantity, preferred styles
+            and requirements.
           </p>
         </div>
 
-        <a class="button button-blue" href="tel:9445471901">
-          Call for Bulk Orders →
+        <a class="button button-blue"
+           href="https://wa.me/919445471901?text=Hello%20Anega%20Sarees%2C%20I%20would%20like%20to%20enquire%20about%20bulk%20orders."
+           target="_blank" rel="noopener noreferrer">
+          Enquire About Bulk Orders →
         </a>
       </div>
     </section>
 
-    <!-- CONTACT SECTION
-         No enquiry box or form.
-         Customers can call directly or visit social media.
-    -->
+    <!-- CONTACT -->
     <section class="contact" id="contact">
       <p class="eyebrow" style="color:var(--orange-light)">Let's Connect</p>
 
-      <h2>
-        Your next favourite saree starts <em>here.</em>
-      </h2>
+      <h2>Your next favourite saree starts <em>here.</em></h2>
 
       <p class="contact-description">
-        Contact Anega Sarees for saree collections, prices, availability, reseller opportunities and bulk orders.
+        Contact Anega Sarees for collections, prices, availability, reseller
+        opportunities and bulk orders.
       </p>
 
-      <!-- DIRECT PHONE CALL LINKS -->
       <div class="contact-numbers">
-        <a href="tel:9445471901">☎ &nbsp; Call 94454 71901</a>
-        <a href="tel:9445709901">☎ &nbsp; Call 94457 06601</a>
+        <a class="whatsapp-link"
+           href="https://wa.me/919445471901"
+           target="_blank" rel="noopener noreferrer">
+          WhatsApp Us
+        </a>
+
+        <a href="tel:+919445471901">☎ Call 94454 71901</a>
+        <a href="tel:+919445706601">☎ Call 94457 06601</a>
       </div>
 
       <p class="social-heading">Follow Anega Sarees</p>
 
-      <!-- SOCIAL MEDIA URLS
-           Replace the placeholders with your actual profile links.
-      -->
       <div class="social-links">
-        <a
-          href="https://www.instagram.com/anegatex"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Instagram ↗
-        </a>
+        <a href="https://www.instagram.com/anegatex"
+           target="_blank" rel="noopener noreferrer">Instagram ↗</a>
 
-        <a
-          href="https://www.facebook.com/Anegatex"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Facebook ↗
-        </a>
+        <a href="https://www.facebook.com/Anegatex"
+           target="_blank" rel="noopener noreferrer">Facebook ↗</a>
 
-        <a
-          href="https://youtube.com/@Anegasarees"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          YouTube ↗
-        </a>
+        <a href="https://youtube.com/@Anegasarees"
+           target="_blank" rel="noopener noreferrer">YouTube ↗</a>
       </div>
     </section>
 
@@ -1235,11 +1295,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-brand">ANEGA SAREES</div>
-
-    <div class="footer-tagline">
-      Hub of South Indian Traditional Sarees
-    </div>
-
+    <div class="footer-tagline">Hub of South Indian Traditional Sarees</div>
     <p>Woven with tradition. Shared with care.</p>
 
     <div class="footer-bottom">
@@ -1248,8 +1304,18 @@
     </div>
   </footer>
 
+  <!-- FLOATING WHATSAPP -->
+  <a class="floating-whatsapp"
+     href="https://wa.me/919445471901"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Chat with Anega Sarees on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.9c0 2.1.5 4.1 1.6 5.9L.2 24l6.3-1.7a12 12 0 0 0 5.6 1.4h.1C18.7 23.7 24 18.4 24 11.9c0-3.2-1.2-6.2-3.5-8.4ZM12.1 21.7a10 10 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.4 4.7Zm5.4-7.4c-.3-.2-1.8-.9-2-.9-.3-.1-.5-.2-.7.1l-1 1.2c-.2.2-.4.2-.7.1-1.8-.9-3-1.6-4.1-3.7-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6 1.9.8 2.7.9 3.6.8.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.5Z"/>
+    </svg>
+  </a>
+
+  <!-- JAVASCRIPT -->
   <script>
-    // Mobile navigation
     const menuToggle = document.querySelector(".menu-toggle");
     const navigation = document.querySelector("nav");
 
@@ -1264,4 +1330,17 @@
       );
     });
 
-    navigation
+    navigation.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navigation.classList.remove("open");
+        menuToggle.textContent = "☰";
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+      });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
