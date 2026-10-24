@@ -8,6 +8,10 @@
   <meta name="description" content="Anega Sarees — Hub of South Indian Traditional Sarees.">
   <title>Anega Sarees | Traditional Sarees</title>
 
+  <!-- FAVICON: CHANGE THIS TO YOUR LOGO URL IF NEEDED -->
+  <link rel="icon" type="image/png" href="anegasarees.jpeg">
+  <link rel="apple-touch-icon" href="anegasarees.jpeg">
+
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
 
   <style>
@@ -16,7 +20,7 @@
       --blue-dark: #10286d;
       --orange: #f07816;
       --orange-light: #ffb36b;
-      --white: #ffffff;
+      --white: #fff;
       --light-blue: #f3f6ff;
       --light-orange: #fff4e9;
       --text: #202747;
@@ -33,7 +37,7 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 90px;
+      scroll-padding-top: 100px;
     }
 
     body {
@@ -86,7 +90,6 @@
       flex-shrink: 0;
     }
 
-    /* Header logo: no white box */
     .brand-logo-area {
       width: 82px;
       height: 70px;
@@ -94,7 +97,6 @@
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      background: transparent;
       overflow: hidden;
     }
 
@@ -102,7 +104,6 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
-      background: transparent;
       mix-blend-mode: multiply;
     }
 
@@ -113,12 +114,10 @@
     }
 
     .brand-text strong {
-      display: block;
       color: var(--blue);
       font-size: 18px;
       font-weight: 800;
       letter-spacing: 2px;
-      text-transform: uppercase;
       line-height: 1.4;
     }
 
@@ -135,7 +134,7 @@
     nav {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 18px;
     }
 
     nav a {
@@ -181,6 +180,16 @@
       background: #d85d08;
     }
 
+    .header-whatsapp {
+      white-space: nowrap;
+      background: #168b50;
+      color: white;
+    }
+
+    .header-whatsapp:hover {
+      background: #107541;
+    }
+
     .menu-toggle {
       display: none;
       border: 0;
@@ -195,15 +204,6 @@
       height: 19px;
       flex: 0 0 19px;
       fill: currentColor;
-    }
-
-    .header-whatsapp {
-      white-space: nowrap;
-      background: #168b50;
-    }
-
-    .header-whatsapp:hover {
-      background: #107541;
     }
 
     /* HERO */
@@ -223,10 +223,6 @@
       gap: 45px;
     }
 
-    .home-intro-copy {
-      min-width: 0;
-    }
-
     .home-intro h1 {
       color: var(--blue-dark);
       font-family: var(--serif);
@@ -239,7 +235,7 @@
       color: var(--orange);
     }
 
-    .home-intro p:not(.eyebrow) {
+    .home-intro-copy > p:not(.eyebrow) {
       max-width: 480px;
       margin-top: 15px;
       color: var(--muted);
@@ -249,7 +245,6 @@
     .home-intro-actions {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
       gap: 15px;
       margin-top: 22px;
     }
@@ -263,30 +258,24 @@
       text-transform: uppercase;
     }
 
-    /* HERO LOGO: BLENDS WITH LIGHT-BLUE BACKGROUND */
-
     .hero-logo-area {
       min-height: 360px;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 15px;
-      background: transparent;
       overflow: hidden;
     }
 
     .hero-logo {
-      display: block;
       width: 100%;
       max-width: 400px;
       max-height: 350px;
       object-fit: contain;
-      background: transparent;
       mix-blend-mode: multiply;
-      filter: contrast(1.03);
     }
 
-    /* HIGHLIGHTS */
+    /* BUSINESS HIGHLIGHTS */
 
     .highlights {
       display: grid;
@@ -328,7 +317,7 @@
       font-size: 10px;
     }
 
-    /* GENERAL SECTION */
+    /* GENERAL SECTIONS */
 
     .section {
       padding: 85px 8%;
@@ -343,7 +332,6 @@
     }
 
     .section-heading h2,
-    .story-copy h2,
     .bulk-content h2 {
       color: var(--blue-dark);
       font-family: var(--serif);
@@ -353,7 +341,6 @@
     }
 
     .section-heading h2 em,
-    .story-copy h2 em,
     .bulk-content h2 em {
       color: var(--orange);
     }
@@ -394,7 +381,7 @@
       position: absolute;
       inset: 25% 0 0;
       content: "";
-      background: linear-gradient(transparent, rgba(8, 22, 68, .88));
+      background: linear-gradient(transparent, rgba(8,22,68,.88));
       pointer-events: none;
     }
 
@@ -438,8 +425,8 @@
     }
 
     .about-heading {
-      text-align: center;
       margin-bottom: 35px;
+      text-align: center;
     }
 
     .about-heading h2 {
@@ -566,6 +553,95 @@
 
     .bulk-content .button {
       flex-shrink: 0;
+    }
+
+    /* CUSTOMER REVIEWS — FOUR VIDEO SPOTS */
+
+    .customer-reviews {
+      padding: 85px 8%;
+      background: var(--light-blue);
+    }
+
+    .reviews-heading {
+      max-width: 700px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .reviews-heading h2 {
+      color: var(--blue-dark);
+      font-family: var(--serif);
+      font-size: clamp(34px, 4vw, 48px);
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .reviews-heading h2 em {
+      color: var(--orange);
+    }
+
+    .reviews-heading > p:last-child {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 26px;
+      max-width: 1150px;
+      margin: 0 auto;
+    }
+
+    .review-card {
+      overflow: hidden;
+      background: white;
+      border: 1px solid #e5e9f5;
+      border-radius: 14px;
+      box-shadow: 0 8px 28px rgba(16,40,109,.07);
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .review-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 34px rgba(16,40,109,.12);
+    }
+
+    .review-video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: var(--blue-dark);
+      object-fit: cover;
+    }
+
+    .review-card-content {
+      padding: 22px 24px 25px;
+    }
+
+    .review-label {
+      display: inline-block;
+      margin-bottom: 9px;
+      color: var(--orange);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .review-card h3 {
+      color: var(--blue);
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .review-card p {
+      margin-top: 9px;
+      color: var(--muted);
+      font-size: 13px;
     }
 
     /* CONTACT */
@@ -727,7 +803,7 @@
       }
 
       nav {
-        gap: 12px;
+        gap: 10px;
       }
 
       nav a {
@@ -884,9 +960,23 @@
       .contact {
         padding: 65px 7%;
       }
+
+      .customer-reviews {
+        padding: 65px 5%;
+      }
+
+      .review-card-content {
+        padding: 18px;
+      }
     }
 
     /* SMALL MOBILE */
+
+    @media (max-width: 650px) {
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+    }
 
     @media (max-width: 480px) {
       .announcement {
@@ -1038,14 +1128,15 @@
       <a href="#about">About</a>
       <a href="#reseller">Reseller Program</a>
       <a href="#bulk">Bulk Orders</a>
+      <a href="#customer-reviews">Customer Reviews</a>
       <a href="#contact">Contact</a>
     </nav>
 
-    <a class="button button-blue header-whatsapp"
+    <a class="button header-whatsapp"
        href="https://wa.me/919445471901"
        target="_blank" rel="noopener noreferrer">
       <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.9c0 2.1.5 4.1 1.6 5.9L.2 24l6.3-1.7a12 12 0 0 0 5.6 1.4h.1C18.7 23.7 24 18.4 24 11.9c0-3.2-1.2-6.2-3.5-8.4ZM12.1 21.7a10 10 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.4 4.7Zm5.4-7.4c-.3-.2-1.8-.9-2-.9-.3-.1-.5-.2-.7.1l-1 1.2c-.2.2-.4.2-.7.1-1.8-.9-3-1.6-4.1-3.7-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6 1.9.8 2.7.9 3.6.8.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.5Z"/>
+        <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.9c0 2.1.5 4.1 1.6 5.9L.2 24l6.3-1.7a12 12 0 0 0 5.6 1.4h.1C18.7 23.7 24 18.4 24 11.9c0-3.2-1.2-6.2-3.5-8.4ZM12.1 21.7a10 10 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.4 4.7Zm5.4-7.4c-.3-.2-1.8-.9-2-.9-.3-.1-.5-.1-.7.1l-1 1.2c-.2.2-.4.2-.7.1-1.8-.9-3-1.6-4.1-3.7-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6 1.9.8 2.7.9 3.6.8.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.5Z"/>
       </svg>
       WhatsApp
     </a>
@@ -1056,31 +1147,25 @@
     <!-- HERO -->
     <section class="home-intro" id="home">
       <div class="home-intro-inner">
-
         <div class="home-intro-copy">
           <p class="eyebrow">The Art of Indian Textiles</p>
-
           <h1>Tradition woven<br>into <em>every thread.</em></h1>
-
           <p>
             Discover sarees for life's most beautiful moments — from wedding
             celebrations to everyday elegance. Explore the colours,
             craftsmanship and heritage of South Indian textiles.
           </p>
-
           <div class="home-intro-actions">
             <a class="button button-orange" href="#collections">Explore Collections →</a>
             <a class="button button-blue" href="#about">About Anega →</a>
           </div>
         </div>
 
-        <!-- Logo blends with the hero background -->
         <div class="hero-logo-area">
           <img class="hero-logo"
                src="anegasarees.jpeg"
                alt="Anega Sarees official logo">
         </div>
-
       </div>
     </section>
 
@@ -1118,7 +1203,6 @@
           <p class="eyebrow">Find Your Favourite</p>
           <h2>Collections with <em>character.</em></h2>
         </div>
-
         <p>
           From timeless silk to graceful everyday drapes, find styles for
           celebrations, gifting and everyday wear.
@@ -1175,7 +1259,7 @@
         <p class="about-intro">
           <strong>Anega Sarees</strong> is a saree manufacturer, weaver,
           and direct-to-consumer wholesaler based in
-          <strong>Ilampillai, Tamil Nadu, India.</strong>
+          <strong>Elampillai, Tamil Nadu, India.</strong>
         </p>
 
         <p>
@@ -1206,7 +1290,6 @@
     <section class="reseller" id="reseller">
       <div class="reseller-copy">
         <p class="eyebrow" style="color:var(--orange-light)">Grow with Anega</p>
-
         <h2>Your business journey can start <em>from home.</em></h2>
 
         <p>
@@ -1238,7 +1321,6 @@
         <div>
           <p class="eyebrow">For Organisations & Groups</p>
           <h2>Bulk orders, made <em>simpler.</em></h2>
-
           <p>
             Planning uniform sarees, coordinated event wear or a bulk textile
             order? Contact us to discuss your quantity, preferred styles
@@ -1254,10 +1336,93 @@
       </div>
     </section>
 
+    <!-- CUSTOMER REVIEWS AND BUSINESS VIDEOS -->
+    <section class="customer-reviews" id="customer-reviews">
+      <div class="reviews-heading">
+        <p class="eyebrow">Real Work · Real Experiences</p>
+        <h2>Our Work, Our <em>Customers.</em></h2>
+        <p>
+          Discover our uniform sarees, bulk orders, production process
+          and customer experiences at Anega Sarees.
+        </p>
+      </div>
+
+      <div class="reviews-grid">
+
+        <!-- VIDEO 1: UNIFORM SAREES
+             REPLACE THE PLACEHOLDER BELOW WITH YOUR VIDEO URL -->
+        <article class="review-card">
+          <video class="review-video" controls playsinline preload="metadata">
+            <source src="uniform stock.mp4" type="video/mp4">
+            Your browser does not support video playback.
+          </video>
+          <div class="review-card-content">
+            <span class="review-label">01 · Our Collection</span>
+            <h3>Uniform Sarees</h3>
+            <p>
+              Explore uniform sarees for schools, organisations,
+              teams and institutions.
+            </p>
+          </div>
+        </article>
+
+        <!-- VIDEO 2: BULK ORDER
+             REPLACE THE PLACEHOLDER BELOW WITH YOUR VIDEO URL -->
+        <article class="review-card">
+          <video class="review-video" controls playsinline preload="metadata">
+            <source src="Bulk order.mp4" type="video/mp4">
+            Your browser does not support video playback.
+          </video>
+          <div class="review-card-content">
+            <span class="review-label">02 · Wholesale</span>
+            <h3>Bulk Order from Malasiya</h3>
+            <p>
+              See how we prepare saree orders for bulk buyers
+              and business customers.
+            </p>
+          </div>
+        </article>
+
+        <!-- VIDEO 3: PRODUCTION UNIT
+             REPLACE THE PLACEHOLDER BELOW WITH YOUR VIDEO URL -->
+        <article class="review-card">
+          <video class="review-video" controls playsinline preload="metadata">
+            <source src="production unit.mp4" type="video/mp4">
+            Your browser does not support video playback.
+          </video>
+          <div class="review-card-content">
+            <span class="review-label">03 · Behind the Scenes</span>
+            <h3>Production Unit</h3>
+            <p>
+              Take a look at our production process,
+              craftsmanship and saree-making work.
+            </p>
+          </div>
+        </article>
+
+        <!-- VIDEO 4: HAPPY CUSTOMER
+             REPLACE THE PLACEHOLDER BELOW WITH YOUR VIDEO URL -->
+        <article class="review-card">
+          <video class="review-video" controls playsinline preload="metadata">
+            <source src="Happy customer.mp4" type="video/mp4">
+            Your browser does not support video playback.
+          </video>
+          <div class="review-card-content">
+            <span class="review-label">04 · Customer Stories</span>
+            <h3>Happy Customer form UK</h3>
+            <p>
+              Watch feedback and experiences shared by our
+              valued Anega Sarees customers.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
     <!-- CONTACT -->
     <section class="contact" id="contact">
       <p class="eyebrow" style="color:var(--orange-light)">Let's Connect</p>
-
       <h2>Your next favourite saree starts <em>here.</em></h2>
 
       <p class="contact-description">
@@ -1271,7 +1436,6 @@
            target="_blank" rel="noopener noreferrer">
           WhatsApp Us
         </a>
-
         <a href="tel:+919445471901">☎ Call 94454 71901</a>
         <a href="tel:+919445706601">☎ Call 94457 06601</a>
       </div>
@@ -1281,10 +1445,8 @@
       <div class="social-links">
         <a href="https://www.instagram.com/anegatex"
            target="_blank" rel="noopener noreferrer">Instagram ↗</a>
-
         <a href="https://www.facebook.com/Anegatex"
            target="_blank" rel="noopener noreferrer">Facebook ↗</a>
-
         <a href="https://youtube.com/@Anegasarees"
            target="_blank" rel="noopener noreferrer">YouTube ↗</a>
       </div>
@@ -1310,7 +1472,7 @@
      target="_blank" rel="noopener noreferrer"
      aria-label="Chat with Anega Sarees on WhatsApp">
     <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.9c0 2.1.5 4.1 1.6 5.9L.2 24l6.3-1.7a12 12 0 0 0 5.6 1.4h.1C18.7 23.7 24 18.4 24 11.9c0-3.2-1.2-6.2-3.5-8.4ZM12.1 21.7a10 10 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.4 4.7Zm5.4-7.4c-.3-.2-1.8-.9-2-.9-.3-.1-.5-.2-.7.1l-1 1.2c-.2.2-.4.2-.7.1-1.8-.9-3-1.6-4.1-3.7-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6 1.9.8 2.7.9 3.6.8.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.5Z"/>
+      <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.9c0 2.1.5 4.1 1.6 5.9L.2 24l6.3-1.7a12 12 0 0 0 5.6 1.4h.1C18.7 23.7 24 18.4 24 11.9c0-3.2-1.2-6.2-3.5-8.4ZM12.1 21.7a10 10 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.4 4.7Zm5.4-7.4c-.3-.2-1.8-.9-2-.9-.3-.1-.5-.1-.7.1l-1 1.2c-.2.2-.4.2-.7.1-1.8-.9-3-1.6-4.1-3.7-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6 1.9.8 2.7.9 3.6.8.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.5Z"/>
     </svg>
   </a>
 
