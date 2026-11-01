@@ -1097,6 +1097,39 @@
         flex-direction: column;
         gap: 6px;
       }
+      /* ANEGA SAREES VISITOR COUNTER */
+
+.visitor-counter {
+  width: 100%;
+  max-width: 320px;
+  margin: 25px auto;
+  padding: 18px;
+  text-align: center;
+  border: 1px solid #5269a5;
+  border-radius: 10px;
+  background: #173a9b;
+  color: white;
+}
+
+.visitor-counter-title {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #ffb36b;
+  font-weight: 700;
+}
+
+.visitor-counter-number {
+  display: block;
+  margin-top: 8px;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.visitor-counter-label {
+  font-size: 10px;
+  color: #e0e6ff;
+}
     }
   </style>
 </head>
@@ -1455,16 +1488,34 @@
   </main>
 
   <!-- FOOTER -->
-  <footer>
-    <div class="footer-brand">ANEGA SAREES</div>
-    <div class="footer-tagline">Hub of South Indian Traditional Sarees</div>
-    <p>Woven with tradition. Shared with care.</p>
+ <footer>
+  <div class="footer-brand">ANEGA SAREES</div>
 
-    <div class="footer-bottom">
-      <span>© <span id="year"></span> Anega Sarees. All rights reserved.</span>
-      <span>Manufacturer · Weaver · Direct Seller</span>
+  <div class="footer-tagline">
+    Hub of South Indian Traditional Sarees
+  </div>
+
+  <p>Woven with tradition. Shared with care.</p>
+
+  <!-- LIVE WEBSITE VISITOR COUNTER -->
+
+  <div class="visitor-counter">
+
+    <div class="visitor-counter-title">
+      WEBSITE VISITORS
     </div>
-  </footer>
+
+    <span class="visitor-counter-number" id="visitorCount">
+      Loading...
+    </span>
+
+    <div class="visitor-counter-label">
+      Thank you for visiting Anega Sarees!
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
 
   <!-- FLOATING WHATSAPP -->
   <a class="floating-whatsapp"
@@ -1502,6 +1553,70 @@
     });
 
     document.getElementById("year").textContent = new Date().getFullYear();
+    // ========================================
+// ANEGA SAREES LIVE VISITOR COUNTER
+// ========================================
+
+const VISITOR_API =
+  "https://script.google.com/macros/s/AKfycbycfmvxLLh-YIdqgFrs7sS2ynoLVrcP5XdzARNKqKvJDXUkuiYstG0sY_bVtuBXkDrFtQ/exec";
+
+function loadVisitorCount() {
+
+  const counter = document.getElementById("visitorCount");
+
+  if (!counter) return;
+
+  let isNewVisitor = false;
+
+  try {
+    isNewVisitor =
+      localStorage.getItem("anega_visitor_counted") !== "yes";
+  } catch (error) {
+    counter.textContent = "Unavailable";
+    return;
+  }
+
+  const action = isNewVisitor ? "visit" : "get";
+
+  window.anegaVisitorCallback = function(data) {
+
+    if (data && data.success) {
+
+      counter.textContent =
+        Number(data.count).toLocaleString("en-IN");
+
+      if (action === "visit") {
+        try {
+          localStorage.setItem(
+            "anega_visitor_counted",
+            "yes"
+          );
+        } catch (error) {
+          console.log("Could not save visitor status.");
+        }
+      }
+
+    } else {
+      counter.textContent = "Unavailable";
+    }
+  };
+
+  const script = document.createElement("script");
+
+  script.src =
+    VISITOR_API +
+    "?action=" + action +
+    "&callback=anegaVisitorCallback" +
+    "&_=" + Date.now();
+
+  script.onerror = function() {
+    counter.textContent = "Unavailable";
+  };
+
+  document.body.appendChild(script);
+}
+
+loadVisitorCount();
   </script>
 
 </body>
