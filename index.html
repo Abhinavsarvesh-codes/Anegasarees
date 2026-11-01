@@ -1554,66 +1554,96 @@
 
     document.getElementById("year").textContent = new Date().getFullYear();
     // ========================================
-// ANEGA SAREES LIVE VISITOR COUNTER
+// ANEGA SAREES VISITOR COUNTER
 // ========================================
 
 const VISITOR_API =
-  "https://script.google.com/macros/s/AKfycbycfmvxLLh-YIdqgFrs7sS2ynoLVrcP5XdzARNKqKvJDXUkuiYstG0sY_bVtuBXkDrFtQ/exec";
+"https://script.google.com/macros/s/AKfycbycfmvxLLh-YIdqgFrs7sS2ynoLVrcP5XdzARNKqKvJDXUkuiYstG0sY_bVtuBXkDrFtQ/exec";
 
 function loadVisitorCount() {
 
-  const counter = document.getElementById("visitorCount");
+    const counter = document.getElementById("visitorCount");
 
-  if (!counter) return;
+    if (!counter) return;
 
-  let isNewVisitor = false;
+    let isNewVisitor;
 
-  try {
-    isNewVisitor =
-      localStorage.getItem("anega_visitor_counted") !== "yes";
-  } catch (error) {
-    counter.textContent = "Unavailable";
-    return;
-  }
-
-  const action = isNewVisitor ? "visit" : "get";
-
-  window.anegaVisitorCallback = function(data) {
-
-    if (data && data.success) {
-
-      counter.textContent =
-        Number(data.count).toLocaleString("en-IN");
-
-      if (action === "visit") {
-        try {
-          localStorage.setItem(
-            "anega_visitor_counted",
-            "yes"
-          );
-        } catch (error) {
-          console.log("Could not save visitor status.");
-        }
-      }
-
-    } else {
-      counter.textContent = "Unavailable";
+    try {
+        isNewVisitor =
+            localStorage.getItem("anega_visitor_counted") !== "yes";
+    } catch (error) {
+        counter.textContent = "Unavailable";
+        return;
     }
-  };
 
-  const script = document.createElement("script");
+    const action = isNewVisitor ? "visit" : "get";
 
-  script.src =
-    VISITOR_API +
-    "?action=" + action +
-    "&callback=anegaVisitorCallback" +
-    "&_=" + Date.now();
+    const callbackName =
+        "anegaCallback_" + Date.now();
 
-  script.onerror = function() {
-    counter.textContent = "Unavailable";
-  };
+    const script = document.createElement("script");
 
-  document.body.appendChild(script);
+    let finished = false;
+
+    const timeout = setTimeout(function() {
+        if (finished) return;
+
+        finished = true;
+        delete window[callbackName];
+        script.remove();
+        counter.textContent = "Unavailable";
+
+    }, 15000);
+
+    window[callbackName] = function(data) {
+
+        if (finished) return;
+
+        finished = true;
+        clearTimeout(timeout);
+
+        if (data && data.success) {
+
+            counter.textContent =
+                Number(data.count).toLocaleString("en-IN");
+
+            if (action === "visit") {
+                try {
+                    localStorage.setItem(
+                        "anega_visitor_counted",
+                        "yes"
+                    );
+                } catch (error) {
+                    console.log(error);
+                }
+            }
+
+        } else {
+            counter.textContent = "Unavailable";
+        }
+
+        delete window[callbackName];
+        script.remove();
+    };
+
+    script.src =
+        VISITOR_API +
+        "?action=" + action +
+        "&callback=" + callbackName +
+        "&_=" + Date.now();
+
+    script.onerror = function() {
+
+        if (finished) return;
+
+        finished = true;
+        clearTimeout(timeout);
+        delete window[callbackName];
+        counter.textContent = "Unavailable";
+        script.remove();
+    };
+
+    document.body.appendChild(script);
 }
 
 loadVisitorCount();
