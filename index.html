@@ -8,7 +8,7 @@
   <meta name="description" content="Anega Sarees — Hub of South Indian Traditional Sarees.">
   <title>Anega Sarees | Traditional Sarees</title>
 
-  <!-- FAVICON: CHANGE THIS TO YOUR LOGO URL IF NEEDED -->
+  <!-- FAVICON -->
   <link rel="icon" type="image/png" href="anegasarees.jpeg">
   <link rel="apple-touch-icon" href="anegasarees.jpeg">
 
@@ -206,11 +206,29 @@
       fill: currentColor;
     }
 
-    /* HERO */
+    /* HERO - DESKTOP AND MOBILE */
 
     .home-intro {
+      position: relative;
+      overflow: hidden;
       padding: 65px 8%;
-      background: var(--light-blue);
+      background:
+        radial-gradient(
+          circle at 85% 45%,
+          rgba(240, 120, 22, 0.13),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 10% 15%,
+          rgba(23, 58, 155, 0.09),
+          transparent 35%
+        ),
+        linear-gradient(
+          120deg,
+          #f8faff 0%,
+          #edf2ff 50%,
+          #fff5eb 100%
+        );
       border-bottom: 1px solid #e5e9f5;
     }
 
@@ -263,8 +281,18 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 15px;
+      padding: 25px;
       overflow: hidden;
+      background:
+        radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.95),
+          rgba(255, 255, 255, 0.45) 65%,
+          transparent 100%
+        );
+      border: 1px solid rgba(23, 58, 155, 0.08);
+      border-radius: 25px;
+      box-shadow: 0 15px 45px rgba(23, 58, 155, 0.06);
     }
 
     .hero-logo {
@@ -555,7 +583,7 @@
       flex-shrink: 0;
     }
 
-    /* CUSTOMER REVIEWS — FOUR VIDEO SPOTS */
+    /* CUSTOMER REVIEWS */
 
     .customer-reviews {
       padding: 85px 8%;
@@ -643,100 +671,90 @@
       color: var(--muted);
       font-size: 13px;
     }
-/* WHATSAPP GROUPS */
 
-.whatsapp-groups {
-  padding: 80px 8%;
-  background: white;
-}
+    /* WHATSAPP GROUPS */
 
-.groups-heading {
-  text-align: center;
-  margin-bottom: 40px;
-}
+    .whatsapp-groups {
+      padding: 80px 8%;
+      background: white;
+    }
 
-.groups-heading h2 {
-  color: var(--blue-dark);
-  font-family: var(--serif);
-  font-size: clamp(34px, 4vw, 48px);
-  font-weight: 500;
-}
+    .groups-heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
-.groups-heading h2 em {
-  color: var(--orange);
-}
+    .groups-heading h2 {
+      color: var(--blue-dark);
+      font-family: var(--serif);
+      font-size: clamp(34px, 4vw, 48px);
+      font-weight: 500;
+    }
 
-.groups-heading p {
-  margin-top: 12px;
-  color: var(--muted);
-  font-size: 13px;
-}
+    .groups-heading h2 em {
+      color: var(--orange);
+    }
 
-.groups-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
-}
+    .groups-heading p {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
 
-.group-card {
-  padding: 30px 18px;
-  text-align: center;
-  background: var(--light-blue);
-  border: 1px solid #e5e9f5;
-  border-radius: 12px;
-  transition: .25s;
-}
+    .groups-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
+    }
 
-.group-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(16,40,109,.10);
-}
+    .group-card {
+      padding: 30px 18px;
+      text-align: center;
+      background: var(--light-blue);
+      border: 1px solid #e5e9f5;
+      border-radius: 12px;
+      transition: .25s;
+    }
 
-.group-icon {
-  font-size: 35px;
-  margin-bottom: 12px;
-}
+    .group-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(16,40,109,.10);
+    }
 
-.group-card h3 {
-  min-height: 55px;
-  color: var(--blue);
-  font-family: var(--serif);
-  font-size: 19px;
-}
+    .group-icon {
+      font-size: 35px;
+      margin-bottom: 12px;
+    }
 
-.group-card p {
-  min-height: 45px;
-  margin: 10px 0 20px;
-  color: var(--muted);
-  font-size: 11px;
-}
+    .group-card h3 {
+      min-height: 55px;
+      color: var(--blue);
+      font-family: var(--serif);
+      font-size: 19px;
+    }
 
-.group-join {
-  display: inline-block;
-  padding: 12px 20px;
-  background: #168b50;
-  color: white;
-  border-radius: 5px;
-  font-size: 11px;
-  font-weight: 700;
-  transition: .2s;
-}
+    .group-card p {
+      min-height: 45px;
+      margin: 10px 0 20px;
+      color: var(--muted);
+      font-size: 11px;
+    }
 
-.group-join:hover {
-  background: #107541;
-}
+    .group-join {
+      display: inline-block;
+      padding: 12px 20px;
+      background: #168b50;
+      color: white;
+      border-radius: 5px;
+      font-size: 11px;
+      font-weight: 700;
+      transition: .2s;
+    }
 
-@media (max-width: 900px) {
-  .groups-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+    .group-join:hover {
+      background: #107541;
+    }
 
-@media (max-width: 480px) {
-  .groups-grid {
-    grid-template-columns: 1fr;
-  }
-}
     /* CONTACT */
 
     .contact {
@@ -823,25 +841,61 @@
       background: #107541 !important;
       border-color: #107541 !important;
     }
-/* SOCIAL MEDIA ICONS */
 
-.social-links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
+    /* SOCIAL MEDIA ICONS */
 
-.social-links svg {
-  width: 19px;
-  height: 19px;
-  fill: currentColor;
-  flex-shrink: 0;
-}
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
 
-.social-links a:hover svg {
-  transform: scale(1.12);
-}
+    .social-links svg {
+      width: 19px;
+      height: 19px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+
+    .social-links a:hover svg {
+      transform: scale(1.12);
+    }
+
+    /* VISITOR COUNTER - ALL SCREEN SIZES */
+
+    .visitor-counter {
+      width: 100%;
+      max-width: 320px;
+      margin: 25px auto;
+      padding: 18px;
+      text-align: center;
+      border: 1px solid #5269a5;
+      border-radius: 10px;
+      background: var(--blue);
+      color: white;
+    }
+
+    .visitor-counter-title {
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: var(--orange-light);
+      font-weight: 700;
+    }
+
+    .visitor-counter-number {
+      display: block;
+      margin-top: 8px;
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: 3px;
+    }
+
+    .visitor-counter-label {
+      font-size: 10px;
+      color: #e0e6ff;
+    }
+
     /* FOOTER */
 
     footer {
@@ -956,6 +1010,10 @@
       .section {
         padding: 70px 5%;
       }
+
+      .groups-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     /* MOBILE NAVIGATION */
@@ -1014,18 +1072,13 @@
         font-size: 10px;
       }
 
-      .home-intro {
-        padding: 50px 7%;
-      }
-
       .home-intro-inner {
         grid-template-columns: 1fr;
         gap: 25px;
       }
 
       .hero-logo-area {
-        min-height: 220px;
-        padding: 10px;
+        min-height: 300px;
       }
 
       .hero-logo {
@@ -1125,8 +1178,17 @@
         font-size: 24px;
       }
 
+      .home-intro {
+        padding: 55px 6%;
+      }
+
       .home-intro h1 {
         font-size: 38px;
+      }
+
+      .hero-logo-area {
+        min-height: 250px;
+        padding: 15px;
       }
 
       .highlights {
@@ -1208,40 +1270,10 @@
         flex-direction: column;
         gap: 6px;
       }
-     
-      /* ANEGA SAREES VISITOR COUNTER */
 
-.visitor-counter {
-  width: 100%;
-  max-width: 320px;
-  margin: 25px auto;
-  padding: 18px;
-  text-align: center;
-  border: 1px solid #5269a5;
-  border-radius: 10px;
-  background: #173a9b;
-  color: white;
-}
-
-.visitor-counter-title {
-  font-size: 12px;
-  letter-spacing: 2px;
-  color: #ffb36b;
-  font-weight: 700;
-}
-
-.visitor-counter-number {
-  display: block;
-  margin-top: 8px;
-  font-size: 32px;
-  font-weight: 800;
-  letter-spacing: 3px;
-}
-
-.visitor-counter-label {
-  font-size: 10px;
-  color: #e0e6ff;
-}
+      .groups-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -1253,8 +1285,10 @@
   </div>
 
   <!-- HEADER -->
+
   <header>
     <a class="brand" href="#home" aria-label="Anega Sarees home">
+
       <div class="brand-logo-area">
         <img class="brand-logo" src="anegatex logo.jpeg" alt="Anega Sarees logo">
       </div>
@@ -1263,6 +1297,7 @@
         <strong>ANEGA SAREES</strong>
         <small>HUB OF SOUTH INDIAN TRADITIONAL SAREES</small>
       </span>
+
     </a>
 
     <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
@@ -1281,9 +1316,11 @@
     <a class="button header-whatsapp"
        href="https://wa.me/919445471901"
        target="_blank" rel="noopener noreferrer">
+
       <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.9c0 2.1.5 4.1 1.6 5.9L.2 24l6.3-1.7a12 12 0 0 0 5.6 1.4h.1C18.7 23.7 24 18.4 24 11.9c0-3.2-1.2-6.2-3.5-8.4ZM12.1 21.7a10 10 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.4 4.7Zm5.4-7.4c-.3-.2-1.8-.9-2-.9-.3-.1-.5-.1-.7.1l-1 1.2c-.2.2-.4.2-.7.1-1.8-.9-3-1.6-4.1-3.7-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6 1.9.8 2.7.9 3.6.8.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.5Z"/>
       </svg>
+
       WhatsApp
     </a>
   </header>
@@ -1291,20 +1328,28 @@
   <main>
 
     <!-- HERO -->
+
     <section class="home-intro" id="home">
+
       <div class="home-intro-inner">
+
         <div class="home-intro-copy">
+
           <p class="eyebrow">The Art of Indian Textiles</p>
+
           <h1>Tradition woven<br>into <em>every thread.</em></h1>
+
           <p>
             Discover sarees for life's most beautiful moments — from wedding
             celebrations to everyday elegance. Explore the colours,
             craftsmanship and heritage of South Indian textiles.
           </p>
+
           <div class="home-intro-actions">
             <a class="button button-orange" href="#collections">Explore Collections →</a>
             <a class="button button-blue" href="#about">About Anega →</a>
           </div>
+
         </div>
 
         <div class="hero-logo-area">
@@ -1312,11 +1357,14 @@
                src="anegasarees.jpeg"
                alt="Anega Sarees official logo">
         </div>
+
       </div>
     </section>
 
     <!-- BUSINESS HIGHLIGHTS -->
+
     <section class="highlights" aria-label="Business highlights">
+
       <div class="highlight">
         <span class="highlight-icon">✦</span>
         <span>
@@ -1340,22 +1388,29 @@
           <small>Let's grow together</small>
         </span>
       </div>
+
     </section>
 
     <!-- COLLECTIONS -->
+
     <section class="section" id="collections">
+
       <div class="section-heading">
+
         <div>
           <p class="eyebrow">Find Your Favourite</p>
           <h2>Collections with <em>character.</em></h2>
         </div>
+
         <p>
           From timeless silk to graceful everyday drapes, find styles for
           celebrations, gifting and everyday wear.
         </p>
+
       </div>
 
       <div class="collections-grid">
+
         <a class="collection-card" href="#contact">
           <img src="bridal.png" alt="Wedding and bridal sarees" loading="lazy">
           <span class="collection-number">01</span>
@@ -1391,17 +1446,21 @@
             <strong>Soft Silk & Butta</strong>
           </span>
         </a>
+
       </div>
     </section>
 
     <!-- ABOUT ANEGA SAREES -->
+
     <section class="about-section" id="about">
+
       <div class="about-heading">
         <p class="eyebrow">THE ANEGA TEX STORY</p>
         <h2>About <em>Anega Sarees.</em></h2>
       </div>
 
       <div class="about-content">
+
         <p class="about-intro">
           <strong>Anega Sarees</strong> is a saree manufacturer, weaver,
           and direct-to-consumer wholesaler based in
@@ -1429,13 +1488,18 @@
           Anega Sarees — Tradition in Every Thread,
           Opportunity in Every Saree.
         </p>
+
       </div>
     </section>
 
     <!-- RESELLER PROGRAM -->
+
     <section class="reseller" id="reseller">
+
       <div class="reseller-copy">
+
         <p class="eyebrow" style="color:var(--orange-light)">Grow with Anega</p>
+
         <h2>Your business journey can start <em>from home.</em></h2>
 
         <p>
@@ -1454,19 +1518,25 @@
            target="_blank" rel="noopener noreferrer">
           Ask About Reselling →
         </a>
+
       </div>
 
       <div class="reseller-image">
         <img src="stock.jpeg" alt="Colourful sarees available from Anega Sarees" loading="lazy">
       </div>
+
     </section>
 
     <!-- BULK ORDERS -->
+
     <section class="bulk" id="bulk">
+
       <div class="bulk-content">
+
         <div>
           <p class="eyebrow">For Organisations & Groups</p>
           <h2>Bulk orders, made <em>simpler.</em></h2>
+
           <p>
             Planning uniform sarees, coordinated event wear or a bulk textile
             order? Contact us to discuss your quantity, preferred styles
@@ -1479,29 +1549,38 @@
            target="_blank" rel="noopener noreferrer">
           Enquire About Bulk Orders →
         </a>
+
       </div>
     </section>
 
     <!-- CUSTOMER REVIEWS AND BUSINESS VIDEOS -->
+
     <section class="customer-reviews" id="customer-reviews">
+
       <div class="reviews-heading">
+
         <p class="eyebrow">Real Work · Real Experiences</p>
+
         <h2>Our Work, Our <em>Customers.</em></h2>
+
         <p>
           Discover our uniform sarees, bulk orders, production process
           and customer experiences at Anega Sarees.
         </p>
+
       </div>
 
       <div class="reviews-grid">
 
-        <!-- VIDEO 1: UNIFORM SAREES
-             REPLACE THE PLACEHOLDER BELOW WITH YOUR VIDEO URL -->
+        <!-- VIDEO 1: UNIFORM SAREES -->
+
         <article class="review-card">
+
           <video class="review-video" controls playsinline preload="metadata">
             <source src="uniform stock.mp4" type="video/mp4">
             Your browser does not support video playback.
           </video>
+
           <div class="review-card-content">
             <span class="review-label">01 · Our Collection</span>
             <h3>Uniform Sarees</h3>
@@ -1510,15 +1589,18 @@
               teams and institutions.
             </p>
           </div>
+
         </article>
 
-        <!-- VIDEO 2: BULK ORDER
-             REPLACE THE PLACEHOLDER BELOW WITH YOUR VIDEO URL -->
+        <!-- VIDEO 2: BULK ORDER -->
+
         <article class="review-card">
+
           <video class="review-video" controls playsinline preload="metadata">
             <source src="Bulk order.mp4" type="video/mp4">
             Your browser does not support video playback.
           </video>
+
           <div class="review-card-content">
             <span class="review-label">02 · Wholesale</span>
             <h3>Bulk Order from Malasiya</h3>
@@ -1527,15 +1609,18 @@
               and business customers.
             </p>
           </div>
+
         </article>
 
-        <!-- VIDEO 3: PRODUCTION UNIT
-             REPLACE THE PLACEHOLDER BELOW WITH YOUR VIDEO URL -->
+        <!-- VIDEO 3: PRODUCTION UNIT -->
+
         <article class="review-card">
+
           <video class="review-video" controls playsinline preload="metadata">
             <source src="production unit.mp4" type="video/mp4">
             Your browser does not support video playback.
           </video>
+
           <div class="review-card-content">
             <span class="review-label">03 · Behind the Scenes</span>
             <h3>Production Unit</h3>
@@ -1544,15 +1629,18 @@
               craftsmanship and saree-making work.
             </p>
           </div>
+
         </article>
 
-        <!-- VIDEO 4: HAPPY CUSTOMER
-             REPLACE THE PLACEHOLDER BELOW WITH YOUR VIDEO URL -->
+        <!-- VIDEO 4: HAPPY CUSTOMER -->
+
         <article class="review-card">
+
           <video class="review-video" controls playsinline preload="metadata">
             <source src="Happy Customer1.mp4" type="video/mp4">
             Your browser does not support video playback.
           </video>
+
           <div class="review-card-content">
             <span class="review-label">04 · Customer Stories</span>
             <h3>Happy Customer</h3>
@@ -1561,112 +1649,114 @@
               valued Anega Sarees customers.
             </p>
           </div>
+
         </article>
 
       </div>
     </section>
-<!-- WHATSAPP GROUPS -->
 
-<section class="whatsapp-groups" id="whatsapp-groups">
+    <!-- WHATSAPP GROUPS -->
 
-  <div class="groups-heading">
-    <p class="eyebrow">Join Our Community</p>
+    <section class="whatsapp-groups" id="whatsapp-groups">
 
-    <h2>Connect with <em>Anega Sarees.</em></h2>
+      <div class="groups-heading">
 
-    <p>
-      Join our WhatsApp Community groups to explore new saree collections,
-      latest designs and exclusive updates daily from Anega Sarees.
-    </p>
-  </div>
+        <p class="eyebrow">Join Our Community</p>
 
-  <div class="groups-grid">
+        <h2>Connect with <em>Anega Sarees.</em></h2>
 
-    <!-- GROUP 1: ANEGA SAREES -->
+        <p>
+          Join our WhatsApp Community groups to explore new saree collections,
+          latest designs and exclusive updates daily from Anega Sarees.
+        </p>
 
-    <div class="group-card">
-      <div class="group-icon"></div>
+      </div>
 
-      <h3>Anega Sarees</h3>
+      <div class="groups-grid">
 
-      <p>
-        Explore our latest saree collections and updates.
-      </p>
+        <!-- GROUP 1 -->
 
-      <a class="group-join"
-         href="https://chat.whatsapp.com/HN1jqT77nzc2vEFOzgpkXS"
-         target="_blank"
-         rel="noopener noreferrer">
-        JOIN GROUP →
-      </a>
-    </div>
+        <div class="group-card">
+          <div class="group-icon">💬</div>
 
+          <h3>Anega Sarees</h3>
 
-    <!-- GROUP 2: ANEGA FASHION -->
+          <p>
+            Explore our latest saree collections and updates.
+          </p>
 
-    <div class="group-card">
-      <div class="group-icon"></div>
+          <a class="group-join"
+             href="https://chat.whatsapp.com/HN1jqT77nzc2vEFOzgpkXS"
+             target="_blank" rel="noopener noreferrer">
+            JOIN GROUP →
+          </a>
+        </div>
 
-      <h3>Anega Fashion</h3>
+        <!-- GROUP 2 -->
 
-      <p>
-        Discover fashion trends, new arrivals and designs.
-      </p>
+        <div class="group-card">
+          <div class="group-icon">✨</div>
 
-      <a class="group-join"
-         href="https://chat.whatsapp.com/EMOhIA3pTC51r8FlKQ4OzX"
-         target="_blank"
-         rel="noopener noreferrer">
-        JOIN GROUP →
-      </a>
-    </div>
+          <h3>Anega Fashion</h3>
 
+          <p>
+            Discover fashion trends, new arrivals and designs.
+          </p>
 
-    <!-- GROUP 3: ANEGA PURE COTTON SAREES -->
+          <a class="group-join"
+             href="https://chat.whatsapp.com/EMOhIA3pTC51r8FlKQ4OzX"
+             target="_blank" rel="noopener noreferrer">
+            JOIN GROUP →
+          </a>
+        </div>
 
-    <div class="group-card">
-      <div class="group-icon"></div>
+        <!-- GROUP 3 -->
 
-      <h3>Anega Pure Cotton Sarees</h3>
+        <div class="group-card">
+          <div class="group-icon">🌿</div>
 
-      <p>
-        Find beautiful pure cotton sarees and new collections.
-      </p>
+          <h3>Anega Pure Cotton Sarees</h3>
 
-      <a class="group-join"
-         href="https://chat.whatsapp.com/BkvkJA9Q0RzH86fEro6aKE"
-         target="_blank"
-         rel="noopener noreferrer">
-        JOIN GROUP →
-      </a>
-    </div>
+          <p>
+            Find beautiful pure cotton sarees and new collections.
+          </p>
 
+          <a class="group-join"
+             href="https://chat.whatsapp.com/BkvkJA9Q0RzH86fEro6aKE"
+             target="_blank" rel="noopener noreferrer">
+            JOIN GROUP →
+          </a>
+        </div>
 
-    <!-- GROUP 4: KANCHIPURAM PURE SILKS -->
+        <!-- GROUP 4 -->
 
-    <div class="group-card">
-      <div class="group-icon"></div>
+        <div class="group-card">
+          <div class="group-icon">👑</div>
 
-      <h3>Kanchipuram Pure Silks</h3>
+          <h3>Kanchipuram Pure Silks</h3>
 
-      <p>
-        Explore traditional Kanchipuram pure silk sarees.
-      </p>
+          <p>
+            Explore traditional Kanchipuram pure silk sarees.
+          </p>
 
-      <a class="group-join"
-         href="https://chat.whatsapp.com/GyPUukIolZJ5mI7MyvRKxT"
-         target="_blank"
-         rel="noopener noreferrer">
-        JOIN GROUP →
-      </a>
-    </div>
+          <a class="group-join"
+             href="https://chat.whatsapp.com/GyPUukIolZJ5mI7MyvRKxT"
+             target="_blank" rel="noopener noreferrer">
+            JOIN GROUP →
+          </a>
+        </div>
 
-  </div>
+      </div>
+    </section>
 
-</section>
     <!-- CONTACT -->
+
     <section class="contact" id="contact">
-      <p class="eyebrow" style="color:var(--orange-light)">For detailed info / order / Enquiry - Contact us</p>
+
+      <p class="eyebrow" style="color:var(--orange-light)">
+        For detailed info / order / Enquiry - Contact us
+      </p>
+
       <h2>Your next favourite saree starts <em>here.</em></h2>
 
       <p class="contact-description">
@@ -1675,217 +1765,289 @@
       </p>
 
       <div class="contact-numbers">
+
         <a class="whatsapp-link"
            href="https://wa.me/919445471901"
            target="_blank" rel="noopener noreferrer">
           WhatsApp Us
         </a>
+
         <a href="tel:+919445471901">☎ Call 94454 71901</a>
+
         <a href="tel:+919445706601">☎ Call 94457 06601</a>
+
       </div>
+
+      <!-- SOCIAL MEDIA LINKS -->
 
       <div class="social-links">
 
-  <!-- INSTAGRAM -->
-  <a href="https://www.instagram.com/anegatex"
-     target="_blank" rel="noopener noreferrer">
+        <!-- INSTAGRAM -->
 
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.5-3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/>
-    </svg>
+        <a href="https://www.instagram.com/anegatex"
+           target="_blank" rel="noopener noreferrer">
 
-    Instagram ↗
-  </a>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.5-3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/>
+          </svg>
 
+          Instagram ↗
+        </a>
 
-  <!-- FACEBOOK -->
-  <a href="https://www.facebook.com/Anegatex"
-     target="_blank" rel="noopener noreferrer">
+        <!-- FACEBOOK -->
 
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.3v3h2.8v8h3.4z"/>
-    </svg>
+        <a href="https://www.facebook.com/Anegatex"
+           target="_blank" rel="noopener noreferrer">
 
-    Facebook ↗
-  </a>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.3v3h2.8v8h3.4z"/>
+          </svg>
 
+          Facebook ↗
+        </a>
 
-  <!-- YOUTUBE -->
-  <a href="https://youtube.com/@Anegasarees"
-     target="_blank" rel="noopener noreferrer">
+        <!-- YOUTUBE -->
 
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/>
-    </svg>
+        <a href="https://youtube.com/@Anegasarees"
+           target="_blank" rel="noopener noreferrer">
 
-    YouTube ↗
-  </a>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/>
+          </svg>
 
-</div>
+          YouTube ↗
+        </a>
+
+      </div>
     </section>
 
   </main>
 
   <!-- FOOTER -->
- <footer>
-  <div class="footer-brand">ANEGA SAREES</div>
 
-  <div class="footer-tagline">
-    Hub of South Indian Traditional Sarees
-  </div>
+  <footer>
 
-  <p>Woven with tradition. Shared with care.</p>
+    <div class="footer-brand">ANEGA SAREES</div>
 
-  <!-- LIVE WEBSITE VISITOR COUNTER -->
-
-  <div class="visitor-counter">
-
-    <div class="visitor-counter-title">
-      WEBSITE VISITORS
+    <div class="footer-tagline">
+      Hub of South Indian Traditional Sarees
     </div>
 
-    <span class="visitor-counter-number" id="visitorCount">
-      Loading...
-    </span>
+    <p>Woven with tradition. Shared with care.</p>
 
-    <div class="visitor-counter-label">
-      Thank you for visiting Anega Sarees!
+    <!-- LIVE WEBSITE VISITOR COUNTER -->
+
+    <div class="visitor-counter">
+
+      <div class="visitor-counter-title">
+        WEBSITE VISITORS
+      </div>
+
+      <span class="visitor-counter-number" id="visitorCount">
+        Loading...
+      </span>
+
+      <div class="visitor-counter-label">
+        Thank you for visiting Anega Sarees!
+      </div>
+
     </div>
 
-  </div>
+    <div class="footer-bottom">
 
-  <div class="footer-bottom">
+      <span>
+        © <span id="year"></span> Anega Sarees. All Rights Reserved.
+      </span>
+
+      <span>
+        Anega Sarees | Elampillai, Tamil Nadu
+      </span>
+
+    </div>
+
+  </footer>
 
   <!-- FLOATING WHATSAPP -->
+
   <a class="floating-whatsapp"
      href="https://wa.me/919445471901"
      target="_blank" rel="noopener noreferrer"
      aria-label="Chat with Anega Sarees on WhatsApp">
+
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.9c0 2.1.5 4.1 1.6 5.9L.2 24l6.3-1.7a12 12 0 0 0 5.6 1.4h.1C18.7 23.7 24 18.4 24 11.9c0-3.2-1.2-6.2-3.5-8.4ZM12.1 21.7a10 10 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.4 4.7Zm5.4-7.4c-.3-.2-1.8-.9-2-.9-.3-.1-.5-.1-.7.1l-1 1.2c-.2.2-.4.2-.7.1-1.8-.9-3-1.6-4.1-3.7-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6 1.9.8 2.7.9 3.6.8.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.5Z"/>
     </svg>
+
   </a>
 
   <!-- JAVASCRIPT -->
+
   <script>
+
+    // MOBILE NAVIGATION
+
     const menuToggle = document.querySelector(".menu-toggle");
     const navigation = document.querySelector("nav");
 
     menuToggle.addEventListener("click", () => {
+
       const isOpen = navigation.classList.toggle("open");
 
       menuToggle.textContent = isOpen ? "×" : "☰";
+
       menuToggle.setAttribute("aria-expanded", String(isOpen));
+
       menuToggle.setAttribute(
         "aria-label",
         isOpen ? "Close navigation" : "Open navigation"
       );
+
     });
 
     navigation.querySelectorAll("a").forEach((link) => {
+
       link.addEventListener("click", () => {
+
         navigation.classList.remove("open");
+
         menuToggle.textContent = "☰";
+
         menuToggle.setAttribute("aria-expanded", "false");
+
         menuToggle.setAttribute("aria-label", "Open navigation");
+
       });
+
     });
 
-    document.getElementById("year").textContent = new Date().getFullYear();
-    // ========================================
-// ANEGA SAREES VISITOR COUNTER
-// ========================================
+    // FOOTER YEAR
 
-const VISITOR_API =
-"https://script.google.com/macros/s/AKfycbycfmvxLLh-YIdqgFrs7sS2ynoLVrcP5XdzARNKqKvJDXUkuiYstG0sY_bVtuBXkDrFtQ/exec";
+    const yearElement = document.getElementById("year");
 
-function loadVisitorCount() {
-
-    const counter = document.getElementById("visitorCount");
-
-    if (!counter) return;
-
-    let isNewVisitor;
-
-    try {
-        isNewVisitor =
-            localStorage.getItem("anega_visitor_counted") !== "yes";
-    } catch (error) {
-        counter.textContent = "Unavailable";
-        return;
+    if (yearElement) {
+      yearElement.textContent = new Date().getFullYear();
     }
 
-    const action = isNewVisitor ? "visit" : "get";
+    // ========================================
+    // ANEGA SAREES VISITOR COUNTER
+    // ========================================
 
-    const callbackName =
+    const VISITOR_API =
+      "https://script.google.com/macros/s/AKfycbycfmvxLLh-YIdqgFrs7sS2ynoLVrcP5XdzARNKqKvJDXUkuiYstG0sY_bVtuBXkDrFtQ/exec";
+
+    function loadVisitorCount() {
+
+      const counter = document.getElementById("visitorCount");
+
+      if (!counter) return;
+
+      let isNewVisitor;
+
+      try {
+
+        isNewVisitor =
+          localStorage.getItem("anega_visitor_counted") !== "yes";
+
+      } catch (error) {
+
+        counter.textContent = "Unavailable";
+        return;
+
+      }
+
+      const action = isNewVisitor ? "visit" : "get";
+
+      const callbackName =
         "anegaCallback_" + Date.now();
 
-    const script = document.createElement("script");
+      const script = document.createElement("script");
 
-    let finished = false;
+      let finished = false;
 
-    const timeout = setTimeout(function() {
+      const timeout = setTimeout(function() {
+
         if (finished) return;
 
         finished = true;
+
         delete window[callbackName];
+
         script.remove();
+
         counter.textContent = "Unavailable";
 
-    }, 15000);
+      }, 15000);
 
-    window[callbackName] = function(data) {
+      window[callbackName] = function(data) {
 
         if (finished) return;
 
         finished = true;
+
         clearTimeout(timeout);
 
         if (data && data.success) {
 
-            counter.textContent =
-                Number(data.count).toLocaleString("en-IN");
+          counter.textContent =
+            Number(data.count).toLocaleString("en-IN");
 
-            if (action === "visit") {
-                try {
-                    localStorage.setItem(
-                        "anega_visitor_counted",
-                        "yes"
-                    );
-                } catch (error) {
-                    console.log(error);
-                }
+          if (action === "visit") {
+
+            try {
+
+              localStorage.setItem(
+                "anega_visitor_counted",
+                "yes"
+              );
+
+            } catch (error) {
+
+              console.log(error);
+
             }
 
+          }
+
         } else {
-            counter.textContent = "Unavailable";
+
+          counter.textContent = "Unavailable";
+
         }
 
         delete window[callbackName];
-        script.remove();
-    };
 
-    script.src =
+        script.remove();
+
+      };
+
+      script.src =
         VISITOR_API +
         "?action=" + action +
         "&callback=" + callbackName +
         "&_=" + Date.now();
 
-    script.onerror = function() {
+      script.onerror = function() {
 
         if (finished) return;
 
         finished = true;
+
         clearTimeout(timeout);
+
         delete window[callbackName];
+
         counter.textContent = "Unavailable";
+
         script.remove();
-    };
 
-    document.body.appendChild(script);
-}
+      };
 
-loadVisitorCount();
+      document.body.appendChild(script);
+
+    }
+
+    loadVisitorCount();
+
   </script>
 
 </body>
