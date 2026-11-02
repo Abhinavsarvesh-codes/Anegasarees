@@ -643,7 +643,100 @@
       color: var(--muted);
       font-size: 13px;
     }
+/* WHATSAPP GROUPS */
 
+.whatsapp-groups {
+  padding: 80px 8%;
+  background: white;
+}
+
+.groups-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.groups-heading h2 {
+  color: var(--blue-dark);
+  font-family: var(--serif);
+  font-size: clamp(34px, 4vw, 48px);
+  font-weight: 500;
+}
+
+.groups-heading h2 em {
+  color: var(--orange);
+}
+
+.groups-heading p {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.groups-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.group-card {
+  padding: 30px 18px;
+  text-align: center;
+  background: var(--light-blue);
+  border: 1px solid #e5e9f5;
+  border-radius: 12px;
+  transition: .25s;
+}
+
+.group-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(16,40,109,.10);
+}
+
+.group-icon {
+  font-size: 35px;
+  margin-bottom: 12px;
+}
+
+.group-card h3 {
+  min-height: 55px;
+  color: var(--blue);
+  font-family: var(--serif);
+  font-size: 19px;
+}
+
+.group-card p {
+  min-height: 45px;
+  margin: 10px 0 20px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.group-join {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #168b50;
+  color: white;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  transition: .2s;
+}
+
+.group-join:hover {
+  background: #107541;
+}
+
+@media (max-width: 900px) {
+  .groups-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .groups-grid {
+    grid-template-columns: 1fr;
+  }
+}
     /* CONTACT */
 
     .contact {
@@ -1163,6 +1256,7 @@
       <a href="#bulk">Bulk Orders</a>
       <a href="#customer-reviews">Customer Reviews</a>
       <a href="#contact">Contact</a>
+      <a href="#whatsapp-groups">WhatsApp Groups</a>
     </nav>
 
     <a class="button header-whatsapp"
@@ -1452,7 +1546,105 @@
 
       </div>
     </section>
+<!-- WHATSAPP GROUPS -->
 
+<section class="whatsapp-groups" id="whatsapp-groups">
+
+  <div class="groups-heading">
+    <p class="eyebrow">Join Our Community</p>
+
+    <h2>Connect with <em>Anega.</em></h2>
+
+    <p>
+      Join our WhatsApp groups to explore new saree collections,
+      latest designs and exclusive updates from Anega Sarees.
+    </p>
+  </div>
+
+  <div class="groups-grid">
+
+    <!-- GROUP 1: ANEGA SAREES -->
+
+    <div class="group-card">
+      <div class="group-icon"></div>
+
+      <h3>Anega Sarees</h3>
+
+      <p>
+        Explore our latest saree collections and updates.
+      </p>
+
+      <a class="group-join"
+         href="https://chat.whatsapp.com/GyPUukIolZJ5mI7MyvRKxT"
+         target="_blank"
+         rel="noopener noreferrer">
+        JOIN GROUP →
+      </a>
+    </div>
+
+
+    <!-- GROUP 2: ANEGA FASHION -->
+
+    <div class="group-card">
+      <div class="group-icon"></div>
+
+      <h3>Anega Fashion</h3>
+
+      <p>
+        Discover fashion trends, new arrivals and designs.
+      </p>
+
+      <a class="group-join"
+         href="https://chat.whatsapp.com/EMOhIA3pTC51r8FlKQ4OzX"
+         target="_blank"
+         rel="noopener noreferrer">
+        JOIN GROUP →
+      </a>
+    </div>
+
+
+    <!-- GROUP 3: ANEGA PURE COTTON SAREES -->
+
+    <div class="group-card">
+      <div class="group-icon"></div>
+
+      <h3>Anega Pure Cotton Sarees</h3>
+
+      <p>
+        Find beautiful pure cotton sarees and new collections.
+      </p>
+
+      <a class="group-join"
+         href="https://chat.whatsapp.com/BkvkJA9Q0RzH86fEro6aKE"
+         target="_blank"
+         rel="noopener noreferrer">
+        JOIN GROUP →
+      </a>
+    </div>
+
+
+    <!-- GROUP 4: KANCHIPURAM PURE SILKS -->
+
+    <div class="group-card">
+      <div class="group-icon"></div>
+
+      <h3>Kanchipuram Pure Silks</h3>
+
+      <p>
+        Explore traditional Kanchipuram pure silk sarees.
+      </p>
+
+      <a class="group-join"
+         href="https://chat.whatsapp.com/GyPUukIolZJ5mI7MyvRKxT"
+         target="_blank"
+         rel="noopener noreferrer">
+        JOIN GROUP →
+      </a>
+    </div>
+
+  </div>
+
+</section>
     <!-- CONTACT -->
     <section class="contact" id="contact">
       <p class="eyebrow" style="color:var(--orange-light)">Let's Connect</p>
